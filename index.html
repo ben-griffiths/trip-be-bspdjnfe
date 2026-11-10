@@ -15,7 +15,7 @@ h2{font-size:18px;margin:6px 0 8px}h3{font-size:12.5px;margin:16px 0 6px;color:v
 .rail{position:relative;display:flex;justify-content:center}.rail:before{content:"";position:absolute;top:0;bottom:0;width:2px;background:var(--line)}.ev:first-child .rail:before{top:14px}.ev:last-child .rail:before{bottom:calc(100% - 14px)}
 .dot{position:relative;margin-top:7px;width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;background:#fff;border:2px solid var(--line);z-index:1}
 .bd{padding:3px 0 7px;min-width:0}.ev.now .dot{border-color:var(--ok);box-shadow:0 0 0 4px rgba(26,158,92,.2)}.ev.now .tm{color:var(--ok)}.ev.past{opacity:.5}
-.k-flight .dot{border-color:#2d6cdf}.k-train .dot{border-color:#7b4ddb}.k-tram .dot{border-color:#1a9e5c}.k-bag .dot{border-color:#f0a33a}.k-hotel .dot{border-color:#d63b74}.k-meal .dot{border-color:#ef7d22;background:#fff0e0}.k-free .dot{border-color:#2d6cdf;background:#e8f0fe}
+.k-flight .dot{border-color:#2d6cdf}.k-train .dot{border-color:#7b4ddb}.k-tram .dot{border-color:#1a9e5c}.k-bag .dot{border-color:#f0a33a}.k-hotel .dot{border-color:#d63b74}.k-meal .dot{border-color:#ef7d22;background:#fff0e0}.k-res .dot{border-color:#ef7d22;background:#fff0e0}.k-free .dot{border-color:#2d6cdf;background:#e8f0fe}
 .tt{font-weight:600;font-size:14px}.ds{font-size:13px;color:#3d4556}
 .bagnote{background:var(--warn);border:1px solid var(--warnb);border-radius:10px;padding:6px 9px}
 .tr{border-left:4px solid #7b4ddb}.k-flight .tr{border-left-color:#2d6cdf}.k-tram .tr{border-left-color:#1a9e5c}
@@ -58,8 +58,9 @@ const DAYS=[
  ["14:20","bag","Drop bags at the NH","3 min from Central. Check-in from <b>15:00</b>: <b>leave bags at reception</b>."],
  ["14:30","meal",M("lunch","Brussels","14:30","Late lunch")],
  ["15:30","free",M("do","Brussels","15:30","Afternoon in Brussels")],
- ["18:00","hotel","Check in at the NH","Collect your bags from reception."],
- ["19:30","meal",M("dinner","Brussels","19:30","Dinner")]]},
+ ["17:30","hotel","Check in at the NH","Collect your bags from reception and freshen up. Leave ~18:20 for dinner (6 min walk)."],
+ ["18:30","res",{name:"Boemvol",label:"Brasserie Boemvol",time:"18:30",city:"Brussels"}],
+ ["20:15","free",M("do","Brussels","20:30","After dinner")]]},
 {label:"Sat 14",date:"2026-11-14",title:"Saturday · Brussels → Ghent",city:"Ghent",ev:[
  ["08:30","meal",M("breakfast","Brussels","08:30","Breakfast")],
  ["09:30","bag","Check out of the NH (by 12:00)","<b>Leave your bags at NH reception</b> for the morning."],
@@ -128,10 +129,11 @@ function slotHTML(slot,date,ref){const R=rank(slot,date,ref);const good=R.filter
  return '<div class="card slot"><div class="hd"><span class="tt">'+mealLabel[slot.meal]+' '+slot.label+'</span><small>'+note+'</small></div><div class="car">'+list.map(x=>card(x.p,date,slot.t,ref)).join("")+'<a class="pc" style="display:flex;align-items:center;justify-content:center;text-align:center;font-size:12px;color:var(--acc);text-decoration:none;padding:8px" target="_blank" href="'+LIST_LINKS[slot.city]+'">＋ Add to Alina\'s '+slot.city+' list</a></div></div>';}
 function trCard(t){const alts=t.alts?'<details><summary>Other departures</summary><table><tr><th>Dep</th><th>Plat</th><th>Arr</th><th>Plat</th><th></th></tr>'+t.alts.map((a,i)=>'<tr'+(i===t.rec?' class="rec"':'')+'><td>'+a[0]+'</td><td>'+a[1]+'</td><td>'+a[2]+'</td><td>'+a[3]+'</td><td>'+a[4]+(i===t.rec?' ✓':'')+'</td></tr>').join("")+'</table></details>':"";
  return '<div class="card tr"><div class="tt">'+(t.from?t.from+' → '+t.to:t.num)+'</div><div class="row"><span class="big">'+t.dep+'</span><span class="arrow"><span>'+t.dur+'</span></span><span class="big">'+t.arr+'</span></div><div class="pl"><b>'+t.dp+'</b><b>'+t.ap+'</b></div><div class="meta">'+(t.from?t.num+' · ':'')+(t.price||"")+(t.note?'<br>⚠️ '+t.note:'')+'</div>'+alts+'</div>';}
-const ICON={flight:"✈️",train:"🚆",tram:"🚋",bag:"🧳",hotel:"🔑",meal:"🍴",free:"✨"};
+function resHTML(x,date){const p=places(x.city).find(q=>q.name.toLowerCase().includes(x.name.toLowerCase()));return '<div class="card" style="border-left:4px solid #ef7d22"><div class="tt">📌 Reserved: '+x.label+' · '+x.time+'</div><div class="ds">'+(p?esc(p.addr)+" · "+walkTxt(hav(HOTEL[x.city].c,[p.lat,p.lng]))+" from the hotel":"")+'</div>'+(p?'<div class="car" style="padding-top:6px">'+card(p,date,x.time,HOTEL[x.city].c)+'</div>':'')+'</div>';}
+const ICON={flight:"✈️",train:"🚆",tram:"🚋",bag:"🧳",hotel:"🔑",meal:"🍴",free:"✨",res:"📌"};
 function dayHTML(d){const H=HOTEL[d.city];let h='<h2>'+d.title+'</h2><div class="card stay"><span style="font-size:22px">🏨</span><div><b>'+(d.label==="Mon 16"?"Flying home tonight":"Tonight: "+H.n)+'</b><div class="chips">'+(d.label==="Mon 16"?'<span class="chip">De Orangerie check-out by '+H.co+'</span>':'<span class="chip">In from '+H.ci+'</span><span class="chip">Out by '+H.co+'</span><a class="chip" target="_blank" href="https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(H.q)+'">📍 Map</a>')+'</div></div></div><div class="tl">';
  d.ev.forEach(e=>{const [tm,k,x,note]=e;let body;
-  if(k==="meal"||k==="free")body=slotHTML(x,d.date,HOTEL[x.city].c);
+  if(k==="res")body=resHTML(x,d.date);else if(k==="meal"||k==="free")body=slotHTML(x,d.date,HOTEL[x.city].c);
   else if(typeof x==="object")body=trCard(x);
   else body=k==="bag"?'<div class="bagnote"><div class="tt">🧳 '+x+'</div><div class="ds">'+(note||"")+'</div></div>':'<div class="card"><div class="tt">'+x+'</div>'+(note?'<div class="ds">'+note+'</div>':'')+'</div>';
   h+='<div class="ev k-'+k+'" data-t="'+d.date+'T'+tm+'"><div class="tm">'+tm+'</div><div class="rail"><div class="dot">'+ICON[k]+'</div></div><div class="bd">'+body+'</div></div>';});
