@@ -1,215 +1,257 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="robots" content="noindex,nofollow"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Belgium 13–16 Nov 2026</title>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="robots" content="noindex,nofollow"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Belgium · 13–16 Nov 2026</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <style>
-:root{--bg:#0f1115;--card:#1a1d24;--mut:#9aa3b2;--acc:#f5c518;--ok:#3ecf8e;--line:#2a2f3a}
-*{box-sizing:border-box}body{margin:0;font-family:-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:#e8eaed;line-height:1.45}
-header{padding:18px 16px 8px}h1{margin:0;font-size:22px}header p{margin:4px 0 0;color:var(--mut);font-size:14px}
-nav{position:sticky;top:0;z-index:5;background:var(--bg);display:flex;gap:6px;overflow-x:auto;padding:8px 12px;border-bottom:1px solid var(--line)}
-nav button{flex:0 0 auto;background:var(--card);color:#e8eaed;border:1px solid var(--line);border-radius:20px;padding:7px 13px;font-size:14px}
-nav button.on{background:var(--acc);color:#111;border-color:var(--acc);font-weight:600}
-main{padding:12px;max-width:820px;margin:auto}section{display:none}section.on{display:block}
-h2{font-size:19px;margin:18px 0 8px}h3{font-size:16px;margin:16px 0 6px;color:var(--acc)}
-.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px;margin:8px 0}
-.tl{list-style:none;padding:0;margin:0}.tl li{display:flex;gap:10px;padding:8px 0;border-bottom:1px dashed var(--line)}.tl li:last-child{border:0}
-.tl .t{flex:0 0 64px;font-weight:700;color:var(--acc);font-variant-numeric:tabular-nums}
-.bag{background:#2b2410;border-left:3px solid var(--acc);padding:2px 6px;border-radius:4px}
-table{width:100%;border-collapse:collapse;font-size:13.5px}th,td{padding:6px 4px;border-bottom:1px solid var(--line);text-align:left}th{color:var(--mut);font-weight:500}
-tr.rec td{color:var(--ok);font-weight:600}
-details{margin-top:6px}summary{cursor:pointer;color:var(--mut);font-size:13.5px}details img{width:100%;max-width:260px;border-radius:8px;margin-top:6px;display:block}
-.item{display:flex;gap:10px;align-items:flex-start}.item input{margin-top:4px;width:20px;height:20px;accent-color:var(--ok)}
-.item .b{flex:1}.item .n{font-weight:600}.tag{display:inline-block;font-size:11.5px;padding:1px 7px;border-radius:10px;background:#2a2f3a;color:#cfd5df;margin:0 4px 0 0}
-.tag.street{background:#3a2a10;color:#ffcc80}.tag.rest{background:#122a3a;color:#90caf9}.tag.sweet{background:#3a1030;color:#f48fb1}.tag.drink{background:#1d3a12;color:#a5d6a7}
-.m{font-size:13px;color:var(--mut)}a{color:#8ab4f8}a.map{font-size:13px;margin-left:4px;white-space:nowrap}
-.warn{background:#3a1d14;border:1px solid #6b3a26;border-radius:10px;padding:10px;margin:8px 0;font-size:14px}
-.filters{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}.filters button{background:var(--card);color:#e8eaed;border:1px solid var(--line);border-radius:16px;padding:5px 11px;font-size:13px}.filters button.on{background:#e8eaed;color:#111}
+:root{--bg:#f4f5f7;--card:#fff;--ink:#1d2433;--mut:#6b7385;--line:#e3e6ec;--acc:#2d6cdf;--accs:#e8f0fe;--ok:#1a9e5c;--warn:#fff4e5;--warnb:#f0c27a}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--ink);line-height:1.45;padding-bottom:80px}
+.hero{background:linear-gradient(135deg,#1d3f8f,#2d6cdf);color:#fff;padding:18px 16px 14px}.hero h1{margin:0;font-size:22px}.hero p{margin:4px 0 0;opacity:.85;font-size:14px}
+nav{position:sticky;top:0;z-index:900;background:#fff;display:flex;gap:6px;overflow-x:auto;padding:9px 12px;border-bottom:1px solid var(--line);scrollbar-width:none}
+nav button{flex:0 0 auto;background:#fff;color:var(--ink);border:1px solid var(--line);border-radius:18px;padding:6px 12px;font-size:14px;cursor:pointer}
+nav button.on{background:var(--acc);border-color:var(--acc);color:#fff;font-weight:600}
+main{max-width:760px;margin:auto;padding:12px}section{display:none}section.on{display:block}
+h2{font-size:20px;margin:10px 0 4px}h3{font-size:15px;margin:20px 0 8px;color:var(--mut);text-transform:uppercase;letter-spacing:.04em}
+.sub{color:var(--mut);font-size:13.5px;margin:0 0 10px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px;box-shadow:0 1px 2px rgba(0,0,0,.03)}
+.stay{display:flex;gap:12px;align-items:center;margin:10px 0}.stay .ic{font-size:26px}.stay b{display:block}.stay .m{font-size:13px;color:var(--mut)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}.chip{font-size:12px;background:var(--accs);color:var(--acc);padding:2px 8px;border-radius:10px}
+.tl{position:relative;margin:8px 0 0 0;padding-left:0}
+.ev{display:grid;grid-template-columns:52px 28px 1fr;gap:0 8px;position:relative}
+.ev .tm{font-weight:700;font-size:13.5px;text-align:right;padding-top:12px;font-variant-numeric:tabular-nums}
+.ev .rail{position:relative;display:flex;justify-content:center}.ev .rail:before{content:"";position:absolute;top:0;bottom:0;width:2px;background:var(--line)}
+.ev:first-child .rail:before{top:18px}.ev:last-child .rail:before{bottom:calc(100% - 18px)}
+.dot{position:relative;margin-top:9px;width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;background:#fff;border:2px solid var(--line);z-index:1}
+.ev .bd{padding:6px 0 10px}
+.ev.now .dot{border-color:var(--ok);box-shadow:0 0 0 4px rgba(26,158,92,.2)}.ev.now .tm{color:var(--ok)}
+.ev.past{opacity:.55}
+.k-flight .dot{background:#e8f0fe;border-color:#2d6cdf}.k-train .dot{background:#efe8fe;border-color:#7b4ddb}.k-tram .dot,.k-bus .dot{background:#e6f6ef;border-color:#1a9e5c}
+.k-bag .dot{background:#fff4e5;border-color:#f0a33a}.k-hotel .dot{background:#fde8ef;border-color:#d63b74}.k-food .dot{background:#fff0e0;border-color:#ef7d22}.k-sight .dot{background:#eef2f7;border-color:#8793a8}.k-market .dot{background:#f3f9e3;border-color:#8bb12e}
+.leg{font-size:12.5px;color:var(--mut);padding:2px 0 2px 0}
+.tt{font-weight:600}.ds{font-size:13.5px;color:#3d4556;margin-top:2px}
+.bagnote{background:var(--warn);border:1px solid var(--warnb);border-radius:10px;padding:8px 10px;font-size:14px}
+.tr{border-left:4px solid #7b4ddb}.k-flight .tr{border-left-color:#2d6cdf}.k-tram .tr,.k-bus .tr{border-left-color:#1a9e5c}
+.tr .row{display:flex;align-items:center;gap:10px}.tr .big{font-size:20px;font-weight:700;font-variant-numeric:tabular-nums}.tr .arrow{flex:1;height:2px;background:var(--line);position:relative}.tr .arrow span{position:absolute;top:-9px;left:50%;transform:translateX(-50%);background:#fff;padding:0 6px;font-size:11.5px;color:var(--mut)}
+.tr .pl{display:flex;justify-content:space-between;font-size:13px;color:var(--mut)}.tr .pl b{color:var(--ink)}
+.tr .meta{font-size:12.5px;color:var(--mut);margin-top:4px}
+details{margin-top:6px}summary{cursor:pointer;color:var(--acc);font-size:13px;list-style:none}summary::-webkit-details-marker{display:none}summary:before{content:"▸ "}details[open] summary:before{content:"▾ "}
+table{width:100%;border-collapse:collapse;font-size:13px;margin-top:4px}td,th{padding:5px 4px;border-bottom:1px solid var(--line);text-align:left;font-variant-numeric:tabular-nums}th{color:var(--mut);font-weight:500}tr.rec td{color:var(--ok);font-weight:600}
+.pc{display:flex;gap:10px;align-items:flex-start}.pc .b{flex:1;min-width:0}.pc .n{font-weight:600}.pc .m{font-size:13px;color:#3d4556}
+.tick{appearance:none;width:24px;height:24px;border:2px solid #c4cad6;border-radius:50%;flex:0 0 24px;cursor:pointer;margin-top:1px;background:#fff}.tick:checked{background:var(--ok);border-color:var(--ok)}.tick:checked:after{content:"✓";color:#fff;display:block;text-align:center;font-weight:700;line-height:20px}
+.tag{display:inline-block;font-size:11px;padding:1px 7px;border-radius:9px;margin:2px 4px 2px 0;background:#eef1f6;color:#4a5263}
+.t-street{background:#fff0e0;color:#b2560d}.t-rest{background:#e8f0fe;color:#2d6cdf}.t-sweet{background:#fde8ef;color:#b02a5b}.t-drink{background:#e6f6ef;color:#167a48}.t-market{background:#f3f9e3;color:#5d7a12}.t-sight{background:#eef2f7;color:#4a5263}
+.acts{display:flex;gap:10px;flex-wrap:wrap;margin-top:4px;font-size:13px}.acts a{color:var(--acc);text-decoration:none}
+.dist{font-size:12px;color:var(--ok);font-weight:600}
+.pc img{width:100%;max-width:280px;border-radius:10px;margin-top:6px;display:block}
+.list .card{margin:8px 0}
+.warn{background:var(--warn);border:1px solid var(--warnb);border-radius:12px;padding:10px 12px;margin:10px 0;font-size:14px}
+.filters{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}.filters button{background:#fff;border:1px solid var(--line);border-radius:16px;padding:5px 11px;font-size:13px;cursor:pointer;color:var(--ink)}.filters button.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+#map{height:62vh;border-radius:14px;border:1px solid var(--line)}
+.fab{position:fixed;right:16px;bottom:18px;z-index:1000;background:var(--ok);color:#fff;border:0;border-radius:24px;padding:11px 16px;font-weight:700;box-shadow:0 4px 14px rgba(0,0,0,.2);cursor:pointer}
 .small{font-size:12.5px;color:var(--mut)}
+.ovr td{vertical-align:top}
 </style></head><body>
-<header><h1>🇧🇪 Belgium · 13–16 Nov 2026</h1><p>Brussels → Ghent → Bruges · Ben &amp; Alina · tick things you want to do; ticks are saved on this device</p></header>
+<div class="hero"><h1>🇧🇪 Brussels → Ghent → Bruges</h1><p>Fri 13 – Mon 16 Nov 2026 · Ben &amp; Alina · tick ✓ the places you like; they collect in “My picks”</p></div>
 <nav id="nav"></nav><main id="main"></main>
+<button class="fab" id="fab" style="display:none">📍 Now</button>
 <script>
+const COORDS={"h-nh":[50.84644,4.35549],"h-harm":[51.05721,3.72278],"h-oran":[51.20699,3.22655],"st-bru":[50.84546,4.35699],"st-gsp":[51.03609,3.71081],"st-brg":[51.19741,3.21752],"st-air":[50.9009,4.48096],"t-koop":[51.05002,3.72117],"s-grand":[50.84671,4.35252],"s-gal":[50.84819,4.35513],"s-mont":[50.84386,4.35677],"s-sablon":[50.84118,4.35486],"s-mp":[50.84499,4.34999],"s-atom":[50.89492,4.34138],"s-jeu":[50.837,4.34584],"s-flagey":[50.82786,4.37215],"s-grav":[51.05718,3.72077],"s-gras":[51.05481,3.72077],"s-mich":[51.05387,3.72056],"s-bavo":[51.05298,3.72716],"s-gbel":[51.05363,3.72468],"s-werre":[51.05504,3.72434],"s-ourlady":[51.20463,3.22448],"s-groen":[51.20587,3.22579],"s-rozen":[51.20696,3.22708],"s-markt":[51.20823,3.22479],"s-burg":[51.20813,3.2267],"s-halve":[51.20217,3.22394],"s-begijn":[51.20135,3.22288],"s-windmill":[51.21548,3.23811],"b-fritland":[50.84741,4.35063],"b-antoine":[50.83711,4.38157],"b-flagey":[50.82835,4.37242],"b-dandoy":[50.84745,4.35163],"b-marcolini":[50.84096,4.35442],"b-finsiecle":[50.84893,4.3471],"b-nuet":[50.84584,4.34983],"b-vincent":[50.8483,4.35439],"b-leon":[50.84816,4.35402],"b-mortsubite":[50.84862,4.35627],"b-moeder":[50.84512,4.34692],"b-delirium":[50.84845,4.35383],"g-max":[51.05417,3.72375],"g-cuberdon":[51.05585,3.72221],"g-tierenteyn":[51.05563,3.72242],"g-balls":[51.0523,3.72022],"g-frites":[51.05466,3.72192],"g-amadeus":[51.05818,3.72275],"g-pakhuis":[51.05331,3.7215],"g-waterzooi":[51.05792,3.72263],"g-dulle":[51.0566,3.7262],"g-dreupel":[51.05627,3.72234],"g-gruut":[51.04935,3.7275],"br-vincent":[51.20533,3.22087],"br-markt":[51.20871,3.2244],"br-choc":[51.20658,3.22275],"br-hotchoc":[51.11254,3.19688],"br-vlaamsche":[51.2076,3.21982],"br-cambrinus":[51.20967,3.22614],"br-dyver":[51.20651,3.22688],"br-passage":[51.20588,3.21915],"br-halvemaan":[51.20217,3.22394],"br-garre":[51.20848,3.22576],"br-beertje":[51.2068,3.22162],"br-rosered":[51.21007,3.22604],"b-noordzee":[50.8505,4.3478],"g-waterhuis":[51.0557,3.7217]};
 const W=n=>"https://thumb.wikimedia.org/wikipedia/commons/thumb/"+n;
-const IMG={
-grand:W("2/26/Grand-Place%2C_Brussels_-_panorama%2C_June_2018.jpg/250px-Grand-Place%2C_Brussels_-_panorama%2C_June_2018.jpg"),
-gal:W("c/cd/Galeries_Royales_Saint-Hubert_%28Brussels%29_-_Interior_view_of_the_Italianate_arcade_with_a_glass-paned_barrel-vaulted_roof_%283%29.jpg/250px-Galeries_Royales_Saint-Hubert_%28Brussels%29_-_Interior_view_of_the_Italianate_arcade_with_a_glass-paned_barrel-vaulted_roof_%283%29.jpg"),
-mont:W("0/06/Mont_des_Arts%2C_Brussels%2C_Belgium.jpg/250px-Mont_des_Arts%2C_Brussels%2C_Belgium.jpg"),
-sablon:W("f/ff/Br%C3%BCssel%2C_Kirche_Notre-Dame_du_Sablon.jpg/250px-Br%C3%BCssel%2C_Kirche_Notre-Dame_du_Sablon.jpg"),
-mp:W("c/c4/Bruxelles_Manneken_Pis_cropped.jpg/250px-Bruxelles_Manneken_Pis_cropped.jpg"),
-delir:W("3/3b/CafeDeliriumEx.JPG/250px-CafeDeliriumEx.JPG"),
-atom:W("6/67/The_Atomium_during_civil_twilight_%28DSCF1135%29.jpg/250px-The_Atomium_during_civil_twilight_%28DSCF1135%29.jpg"),
-grav:W("f/fd/Gent_Gravensteen_R01.jpg/250px-Gent_Gravensteen_R01.jpg"),
-gras:W("b/bb/Graslei_gent_avondlicht.jpg/250px-Graslei_gent_avondlicht.jpg"),
-koren:W("1/13/Gent_Graslei_zonsondergang.JPG/250px-Gent_Graslei_zonsondergang.JPG"),
-bavo:W("7/78/Gent-Sint-Baafskathedraal_vom_Belfried_aus_gesehen.jpg/250px-Gent-Sint-Baafskathedraal_vom_Belfried_aus_gesehen.jpg"),
-altar:W("5/50/Ghent_Altarpiece_Google_Art_Project.jpg/250px-Ghent_Altarpiece_Google_Art_Project.jpg"),
-gbel:W("a/a4/Belfry_of_Ghent_%28DSCF0247%2CDSCF0249%29.jpg/250px-Belfry_of_Ghent_%28DSCF0247%2CDSCF0249%29.jpg"),
-gruut:W("2/26/13th_Century_Grut_Bier.jpg/250px-13th_Century_Grut_Bier.jpg"),
-ourlady:W("7/78/Church_Of_Our_Lady_Bruges.jpg/250px-Church_Of_Our_Lady_Bruges.jpg"),
-groen:W("3/33/Brugge_-_Dijver_12_-Voormalig_poortgebouw_van_de_proosdij_van_Onze-Lieve-Vrouw%2C_heden_ingang_van_het_Groeningemuseum_-_82339.jpg/250px-Brugge_-_Dijver_12_-Voormalig_poortgebouw_van_de_proosdij_van_Onze-Lieve-Vrouw%2C_heden_ingang_van_het_Groeningemuseum_-_82339.jpg"),
-markt:W("3/31/Bruges_Market_Square_and_Belfry.jpg/250px-Bruges_Market_Square_and_Belfry.jpg"),
-bbel:W("3/37/Brugge_Belfort_HDR.jpg/250px-Brugge_Belfort_HDR.jpg"),
-burg:W("c/c2/Burg_%28Brugge%29.JPG/250px-Burg_%28Brugge%29.JPG"),
-basil:W("6/6e/Basilica_of_the_Holy_Blood_-_Saint-Baselius_Chapel%2C_Bruges%2C_Belgium..jpg/250px-Basilica_of_the_Holy_Blood_-_Saint-Baselius_Chapel%2C_Bruges%2C_Belgium..jpg")};
-const map=(q)=>'<a class="map" target="_blank" href="https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(q)+'">📍 Map</a>';
+const IMG={grand:W("2/26/Grand-Place%2C_Brussels_-_panorama%2C_June_2018.jpg/250px-Grand-Place%2C_Brussels_-_panorama%2C_June_2018.jpg"),gal:W("c/cd/Galeries_Royales_Saint-Hubert_%28Brussels%29_-_Interior_view_of_the_Italianate_arcade_with_a_glass-paned_barrel-vaulted_roof_%283%29.jpg/250px-Galeries_Royales_Saint-Hubert_%28Brussels%29_-_Interior_view_of_the_Italianate_arcade_with_a_glass-paned_barrel-vaulted_roof_%283%29.jpg"),mont:W("0/06/Mont_des_Arts%2C_Brussels%2C_Belgium.jpg/250px-Mont_des_Arts%2C_Brussels%2C_Belgium.jpg"),sablon:W("f/ff/Br%C3%BCssel%2C_Kirche_Notre-Dame_du_Sablon.jpg/250px-Br%C3%BCssel%2C_Kirche_Notre-Dame_du_Sablon.jpg"),mp:W("c/c4/Bruxelles_Manneken_Pis_cropped.jpg/250px-Bruxelles_Manneken_Pis_cropped.jpg"),delir:W("3/3b/CafeDeliriumEx.JPG/250px-CafeDeliriumEx.JPG"),atom:W("6/67/The_Atomium_during_civil_twilight_%28DSCF1135%29.jpg/250px-The_Atomium_during_civil_twilight_%28DSCF1135%29.jpg"),grav:W("f/fd/Gent_Gravensteen_R01.jpg/250px-Gent_Gravensteen_R01.jpg"),gras:W("b/bb/Graslei_gent_avondlicht.jpg/250px-Graslei_gent_avondlicht.jpg"),koren:W("1/13/Gent_Graslei_zonsondergang.JPG/250px-Gent_Graslei_zonsondergang.JPG"),bavo:W("7/78/Gent-Sint-Baafskathedraal_vom_Belfried_aus_gesehen.jpg/250px-Gent-Sint-Baafskathedraal_vom_Belfried_aus_gesehen.jpg"),altar:W("5/50/Ghent_Altarpiece_Google_Art_Project.jpg/250px-Ghent_Altarpiece_Google_Art_Project.jpg"),gbel:W("a/a4/Belfry_of_Ghent_%28DSCF0247%2CDSCF0249%29.jpg/250px-Belfry_of_Ghent_%28DSCF0247%2CDSCF0249%29.jpg"),gruut:W("2/26/13th_Century_Grut_Bier.jpg/250px-13th_Century_Grut_Bier.jpg"),ourlady:W("7/78/Church_Of_Our_Lady_Bruges.jpg/250px-Church_Of_Our_Lady_Bruges.jpg"),groen:W("3/33/Brugge_-_Dijver_12_-Voormalig_poortgebouw_van_de_proosdij_van_Onze-Lieve-Vrouw%2C_heden_ingang_van_het_Groeningemuseum_-_82339.jpg/250px-Brugge_-_Dijver_12_-Voormalig_poortgebouw_van_de_proosdij_van_Onze-Lieve-Vrouw%2C_heden_ingang_van_het_Groeningemuseum_-_82339.jpg"),markt:W("3/31/Bruges_Market_Square_and_Belfry.jpg/250px-Bruges_Market_Square_and_Belfry.jpg"),bbel:W("3/37/Brugge_Belfort_HDR.jpg/250px-Brugge_Belfort_HDR.jpg"),burg:W("c/c2/Burg_%28Brugge%29.JPG/250px-Burg_%28Brugge%29.JPG"),basil:W("6/6e/Basilica_of_the_Holy_Blood_-_Saint-Baselius_Chapel%2C_Bruges%2C_Belgium..jpg/250px-Basilica_of_the_Holy_Blood_-_Saint-Baselius_Chapel%2C_Bruges%2C_Belgium..jpg")};
+// PLACES: id: [city,type,name,desc,mapQuery,img]
+const PL={
+"s-grand":["Brussels","sight","Grand-Place","Gilded guildhalls; free. Go back after dark when it's lit up.","Grand-Place Brussels",IMG.grand],
+"s-gal":["Brussels","sight","Galeries Royales Saint-Hubert","1840s glass-roofed arcade: Neuhaus (inventors of the praline), Mary, Mokafé.","Galeries Royales Saint-Hubert",IMG.gal],
+"s-mont":["Brussels","sight","Mont des Arts","Gardens and the best view over the city, ideal at sunset (~16:45).","Mont des Arts Brussels",IMG.mont],
+"s-mp":["Brussels","sight","Manneken Pis","Tiny and famous. Quick look, move on.","Manneken Pis",IMG.mp],
+"s-atom":["Brussels","sight","Atomium","~30 min on metro 6 to Heysel. Iconic, but a detour.","Atomium",IMG.atom],
+"s-jeu":["Brussels","market","Jeu de Balle flea market","The Marolles flea market, every morning since 1873: hundreds of sellers with silverware, comics, vinyl, old Brussels junk and the odd treasure. Best early; packs up early afternoon. Bargain in cash. Cafés around the square for coffee.","Place du Jeu de Balle Brussels"],
+"s-sablon":["Brussels","market","Sablon antiques market","Saturday 09:00–18:00 in front of the Gothic Notre-Dame du Sablon. Smarter than Jeu de Balle; the square is also Brussels' posh chocolate district (Wittamer, Marcolini).","Place du Grand Sablon",IMG.sablon],
+"s-flagey":["Brussels","market","Flagey food market (option)","Weekend food market on Place Flagey (Sat ~08:00–14:30): cheese, charcuterie, produce, local crowd. Pair with fries at Frit Flagey. ~20 min by taxi/public transport from the centre.","Place Eugene Flagey"],
+"b-fritland":["Brussels","street","🍟 Fritland","Classic cone of double-fried frites, 1 min from Grand-Place. Get andalouse or samurai sauce. Open late.","Fritland Brussels"],
+"b-antoine":["Brussels","street","🍟 Maison Antoine","Brussels' most famous friterie since 1948, Place Jourdan. ~20 min out; locals eat them in the bars around the square, which let you bring frites in.","Maison Antoine Place Jourdan"],
+"b-flagey":["Brussels","street","🍟 Frit Flagey","Hugely popular kiosk on Place Flagey; long queue, worth it. Combine with the Flagey market on Saturday.","Frit Flagey"],
+"b-noordzee":["Brussels","street","Noordzee / Mer du Nord","Standing fish bar on Place Sainte-Catherine: grey-shrimp croquettes, fish soup, grilled scampi and a glass of white at the counter. Closes early evening.","Noordzee Mer du Nord Brussels"],
+"b-dandoy":["Brussels","sweet","Maison Dandoy","Speculoos since 1829 with a waffle tearoom. Try a Brussels waffle (light) and a Liège waffle (chewy, sugary).","Maison Dandoy Rue au Beurre"],
+"b-marcolini":["Brussels","sweet","Wittamer & Pierre Marcolini","Top-end pastries and pralines on the Sablon.","Pierre Marcolini Grand Sablon"],
+"b-finsiecle":["Brussels","rest","Fin de Siècle","Hip, cheap Belgian classics (carbonnade, stoemp, rabbit). No bookings; arrive ~18:30 or queue.","Fin de Siecle Brussels"],
+"b-nuet":["Brussels","rest","Nüetnigenough","Small beer-cuisine place, beef cheek in beer and a great list. Book.","Nuetnigenough Brussels"],
+"b-vincent":["Brussels","rest","Restaurant Vincent","Old-school: you walk in through the kitchen into a tiled dining room. Steak, mussels, flambés.","Restaurant Vincent Brussels"],
+"b-leon":["Brussels","rest","Chez Léon","Moules-frites institution. Touristy but reliable.","Chez Leon Brussels"],
+"b-mortsubite":["Brussels","drink","À la Mort Subite","1928 café; gueuze or kriek with a cheese plate.","A la Mort Subite Brussels"],
+"b-moeder":["Brussels","drink","Moeder Lambic Fontainas","The beer nerds' pick: 40 taps of Belgian craft and lambic.","Moeder Lambic Fontainas"],
+"b-delirium":["Brussels","drink","Delirium Café","Loud, touristy, 2,000+ beers. Fun for one.","Delirium Cafe Brussels",IMG.delir],
+"s-grav":["Ghent","sight","Gravensteen","Moated 1100s castle; ~1–1.5 h; funny audio guide and a great view from the battlements.","Gravensteen Gent",IMG.grav],
+"s-gras":["Ghent","sight","Graslei & Korenlei","Medieval guild houses on the water. Best at dusk.","Graslei Gent",IMG.gras],
+"s-mich":["Ghent","sight","St Michael's Bridge","The classic view of Ghent's three towers.","Sint-Michielsbrug Gent",IMG.koren],
+"s-bavo":["Ghent","sight","St Bavo's: Ghent Altarpiece","Van Eyck, 1432, one of the most important paintings in the world. Book a time online; the AR tour is excellent.","Sint-Baafskathedraal Gent",IMG.altar],
+"s-gbel":["Ghent","sight","Belfry of Ghent","Lift most of the way up, 360° view. Next to St Bavo's.","Belfort Gent",IMG.gbel],
+"s-werre":["Ghent","sight","Werregarenstraat","Legal graffiti alley, constantly repainted.","Werregarenstraat Gent"],
+"g-max":["Ghent","sweet","Max waffles","Family waffle house from the 1800s by the Belfry.","Max Goudenleeuwplein Gent"],
+"g-cuberdon":["Ghent","sweet","Cuberdon carts, Groentenmarkt","Purple cone sweets with a runny raspberry centre. Ghent's signature.","Groentenmarkt Gent"],
+"g-tierenteyn":["Ghent","street","Tierenteyn-Verlent mustard","Mustard ladled from wooden barrels since 1790. Great cheap souvenir.","Tierenteyn-Verlent Gent"],
+"g-holyfood":["Ghent","street","Holy Food Market","Food hall in a 17th-century chapel; lots of stalls. Check hours.","Holy Food Market Gent"],
+"g-balls":["Ghent","street","Balls & Glory","Big stuffed meatballs with stoemp. Quick and cheap.","Balls and Glory Gent"],
+"g-frites":["Ghent","street","🍟 Frites around Korenmarkt","Several friteries; ask for stoofvlees (beef stew) on top.","Frituur Korenmarkt Gent"],
+"g-amadeus":["Ghent","rest","Amadeus (Patershol)","All-you-can-eat spare ribs in an old house, next to your hotel. Book for Saturday.","Amadeus Plotersgracht Gent"],
+"g-pakhuis":["Ghent","rest","Pakhuis","Huge brasserie in a restored warehouse: oysters, Belgian classics. Book.","Pakhuis Gent"],
+"g-waterzooi":["Ghent","rest","Try: Gentse waterzooi","Ghent's creamy chicken or fish stew. Most Patershol restaurants serve it.","Patershol Gent"],
+"g-dulle":["Ghent","drink","Dulle Griet","250+ beers on Vrijdagmarkt. Order a Kwak and hand over a shoe as the glass deposit.","Dulle Griet Gent"],
+"g-waterhuis":["Ghent","drink","Het Waterhuis aan de Bierkant","Canal-side beer café with a big local list.","Het Waterhuis aan de Bierkant Gent"],
+"g-dreupel":["Ghent","drink","'t Dreupelkot","Tiny jenever bar by the river, hundreds of flavours.","t Dreupelkot Gent"],
+"g-gruut":["Ghent","drink","Gruut brewery","Beer brewed with herbs instead of hops; tasting flight.","Gruut Brewery Gent",IMG.gruut],
+"s-ourlady":["Bruges","sight","Church of Our Lady","Michelangelo's Madonna and Child, the only one of his sculptures to leave Italy in his lifetime.","Onze-Lieve-Vrouwekerk Brugge",IMG.ourlady],
+"s-groen":["Bruges","sight","Groeningemuseum","Van Eyck, Bosch, Memling in 1–1.5 h. Closed Mondays.","Groeningemuseum",IMG.groen],
+"s-rozen":["Bruges","sight","Rozenhoedkaai","The postcard view of Bruges.","Rozenhoedkaai Brugge"],
+"s-markt":["Bruges","sight","Markt & Belfry","366 steps for the rooftop view; book a time slot.","Belfort Brugge",IMG.bbel],
+"s-burg":["Bruges","sight","Burg & Basilica of the Holy Blood","Gothic city hall and the chapel with the Holy Blood relic.","Heilig-Bloedbasiliek Brugge",IMG.basil],
+"s-halve":["Bruges","sight","De Halve Maan brewery tour","Family brewery since 1856 with a beer pipeline under the city. Book ahead.","De Halve Maan Brugge"],
+"s-begijn":["Bruges","sight","Begijnhof & Minnewater","White-walled courtyard and the Lake of Love. Best early.","Begijnhof Brugge"],
+"s-windmill":["Bruges","sight","Windmills on the Kruisvest","~25 min walk along the ramparts. Nice if dry.","Sint-Janshuismolen Brugge"],
+"br-vincent":["Bruges","street","🍟 Chez Vincent","Bruges' best-loved frites, cooked in beef fat, by St Salvator's. 5 min from the hotel.","Chez Vincent Brugge"],
+"br-markt":["Bruges","street","🍟 Frietkoten at the Markt","The two green stands at the foot of the Belfry. Touristy but iconic.","Markt Brugge frietkot",IMG.markt],
+"br-choc":["Bruges","sweet","The Chocolate Line","Experimental pralines (bacon, wasabi) in a former palace.","The Chocolate Line Brugge"],
+"br-hotchoc":["Bruges","sweet","The Old Chocolate House","Hot chocolate made by melting a block into hot milk, plus waffles.","The Old Chocolate House Brugge"],
+"br-vlaamsche":["Bruges","rest","De Vlaamsche Pot","Flemish home cooking: stew in Brugse Zot, eel in green sauce. Book.","De Vlaamsche Pot Brugge"],
+"br-cambrinus":["Bruges","rest","Cambrinus","Beer brasserie, ~400 beers and beer-based dishes.","Cambrinus Brugge"],
+"br-dyver":["Bruges","rest","Den Dyver","Smarter beer-pairing restaurant on the Dijver canal. Book.","Den Dyver Brugge"],
+"br-passage":["Bruges","rest","Gran Kaffee de Passage","Cheap candlelit Flemish brasserie; great stoofvlees.","Gran Kaffee de Passage Brugge"],
+"br-halvemaan":["Bruges","rest","Brasserie De Halve Maan","Lunch at the brewery after the tour.","De Halve Maan Brugge"],
+"br-garre":["Bruges","drink","De Garre","Hidden alley bar: Tripel van de Garre (limit 3!) with cheese cubes.","De Garre Brugge"],
+"br-beertje":["Bruges","drink","'t Brugs Beertje","Legendary small brown café with a huge list.","t Brugs Beertje Brugge"],
+"br-rosered":["Bruges","drink","Café Rose Red","Pretty beer bar under hanging roses.","Cafe Rose Red Brugge"]};
+const HOT={"Brussels":"h-nh","Ghent":"h-harm","Bruges":"h-oran"};
+const TL={street:"🍟 Street food",rest:"🍽️ Restaurant",sweet:"🍫 Sweet",drink:"🍺 Drinks",market:"🛍️ Market",sight:"🏛️ Sight"};
+const DAYS=[
+{k:"fri",label:"Fri 13",date:"2026-11-13",title:"Friday · London → Brussels",city:"Brussels",
+ stay:{n:"NH Brussels Carrefour de l'Europe",q:"NH Brussels Carrefour de l'Europe",ci:"Check-in from 15:00",co:"Check-out by 12:00",note:"3 min from Bruxelles-Central"},
+ ev:[
+ ["09:00","flight","Arrive Heathrow Terminal 2","Scan your boarding pass at security at least 30 min before departure. One personal item each only (Basic fare)."],
+ ["11:05","flight",{dep:"11:05",dp:"LHR T2",arr:"13:15",ap:"BRU",num:"Brussels Airlines SN2094",dur:"1h 10m",note:"Booking ref in your email"}],
+ ["13:54","train",{dep:"13:54",dp:"Platform 3",arr:"14:12",ap:"Platform 4",from:"Brussels Airport",to:"Bruxelles-Central",num:"EC 9232",dur:"18 min",price:"from ~£9 each",alts:[["13:42","3","14:05","4","IC 1935"],["13:54","3","14:12","4","EC 9232"],["13:57","1","14:15","2","IC 2235"],["14:13","3","14:31","4","IC 2337"],["14:24","2","14:42","2","IC 2836"]],rec:1}],
+ ["14:20","bag","Drop bags at the NH","🚶 3 min walk from Central. Check-in isn't until <b>15:00</b>, so <b>leave your bags at reception</b> and head out."],
+ ["14:30","sight","s-grand"],["14:45","sight","s-gal"],["15:00","food","b-dandoy"],
+ ["15:30","food","b-fritland","Alina's fries, stop one 🍟"],
+ ["16:00","sight","s-mp"],["16:30","sight","s-mont","Sunset ~16:45"],
+ ["17:15","food","b-noordzee","Walk ~12 min. Shrimp croquettes before it closes"],
+ ["18:00","hotel","Check in at the NH","Collect your bags from reception and freshen up."],
+ ["19:30","food","b-finsiecle","Or Nüetnigenough / Vincent (see ideas below)"],
+ ["21:30","food","b-mortsubite","Then Grand-Place lit up on the way back"]]},
+{k:"sat",label:"Sat 14",date:"2026-11-14",title:"Saturday · Brussels markets → Ghent",city:"Ghent",
+ stay:{n:"Hotel Harmony, Ghent",q:"Hotel Harmony Kraanlei 37 Gent",ci:"Check-in from 15:00",co:"Check-out by 11:00",note:"Kraanlei 37, Patershol, canal-side"},
+ ev:[
+ ["08:45","bag","Check out of the NH (by 12:00)","<b>Leave your bags at NH reception</b> for the morning so you can do the markets hands-free."],
+ ["09:00","market","s-jeu","🚶 ~15 min walk from the hotel. Saturday is the busiest, best day"],
+ ["10:30","market","s-sablon","🚶 ~10 min uphill from Jeu de Balle"],
+ ["11:15","food","b-marcolini","Right on the Sablon"],
+ ["11:45","bag","Collect bags from the NH","🚶 ~10 min back, then 3 min to Central"],
+ ["12:43","train",{dep:"12:43",dp:"Platform 2",arr:"13:19",ap:"Platform 12",from:"Bruxelles-Central",to:"Gent-Sint-Pieters",num:"IC 2834",dur:"36 min",price:"from ~£7 each",alts:[["12:20","4","12:56","12","IC 1533"],["12:43","2","13:19","12","IC 2834"],["12:56","2","13:31","12","IC 534"],["13:20","4","13:56","12","IC 1534"],["13:43","2","14:19","12","IC 2835"]],rec:1}],
+ ["13:27","tram",{dep:"13:27",dp:"Tram platform 2",arr:"13:40",ap:"Koophandelsplein",from:"Gent-Sint-Pieters",to:"Koophandelsplein",num:"Tram T1",dur:"13 min + 12 min walk",price:"€3 each, tap a contactless card",alts:[["13:27","T1","13:40","","every ~5 min"],["13:32","T1","13:45","",""],["13:37","T1","13:50","",""]],rec:0,note:"Roadworks: T1 currently stops short of Gravensteen. With bags, a taxi from the rank (~10 min, ~€15–20) is easier."}],
+ ["13:55","bag","Drop bags at Hotel Harmony","Check-in is from <b>15:00</b>, so <b>leave your bags at reception</b>."],
+ ["14:00","sight","s-bavo","🚶 ~8 min. Book a slot and check the last entry time"],
+ ["15:15","sight","s-gbel","Next door to St Bavo's"],
+ ["15:45","food","g-cuberdon","Plus Tierenteyn mustard on the same square"],
+ ["16:15","sight","s-mich","Graslei & Korenlei at dusk (sunset ~16:45)"],
+ ["17:15","hotel","Check in at Hotel Harmony","Get your bags into the room and freshen up."],
+ ["19:30","food","g-amadeus","Book! Or Pakhuis, or waterzooi anywhere in Patershol"],
+ ["21:30","food","g-dulle","Then a jenever nightcap at 't Dreupelkot"]]},
+{k:"sun",label:"Sun 15",date:"2026-11-15",title:"Sunday · Ghent → Bruges",city:"Bruges",
+ stay:{n:"Hotel De Orangerie, Bruges",q:"Hotel De Orangerie Brugge",ci:"Check-in from 15:00",co:"Check-out by 11:00 (late until 13:00 for €25/h)",note:"On the Dijver canal, quiet south side"},
+ ev:[
+ ["09:30","bag","Check out of Harmony (by 11:00)","<b>Leave your bags at reception</b> while you see the castle."],
+ ["09:45","sight","s-werre","Morning stroll; quiet before the crowds"],
+ ["10:00","sight","s-grav","2 min from the hotel. Check opening time on the day"],
+ ["11:10","bag","Collect bags from Harmony","🚶 12 min to the Koophandelsplein tram stop"],
+ ["11:33","tram",{dep:"11:33",dp:"Koophandelsplein",arr:"11:44",ap:"Station, tram platform 1",from:"Koophandelsplein",to:"Gent-Sint-Pieters",num:"Tram T1",dur:"11 min",price:"€3 each, tap a contactless card",alts:[["11:26","T1","11:37","",""],["11:33","T1","11:44","",""],["11:37","T1","11:48","",""]],rec:1}],
+ ["12:12","train",{dep:"12:12",dp:"Platform 6",arr:"12:36",ap:"Platform 10",from:"Gent-Sint-Pieters",to:"Brugge",num:"IC 1832",dur:"24 min",price:"from ~£5 each",alts:[["11:37","12","11:59","10","IC 532"],["12:00","12","12:26","10","IC 1532"],["12:12","6","12:36","10","IC 1832"],["12:22","12","12:52","2","IC 2833"],["12:37","12","12:59","10","IC 533"]],rec:2,note:"Avoid the 11:43 L train: it's a 41-min stopper."}],
+ ["12:40","bag","Walk to Hotel De Orangerie & drop bags","🚶 18 min past Minnewater (or bus 1/2 from platform A1, ~€3). Check-in from <b>15:00</b>: <b>leave your bags at reception</b>."],
+ ["13:15","food","br-vincent","Bruges fries 🍟, 5 min from the hotel"],
+ ["14:00","sight","s-ourlady"],
+ ["14:45","sight","s-groen","Today only: closed Mondays"],
+ ["16:00","sight","s-rozen","Dusk"],["16:20","sight","s-burg"],["16:45","sight","s-markt"],
+ ["17:15","food","br-hotchoc"],
+ ["18:00","hotel","Check in at De Orangerie","Collect your bags from reception."],
+ ["19:30","food","br-vlaamsche","Or Cambrinus / Den Dyver. Book, many places close Sun/Mon"],
+ ["21:30","food","br-garre"]]},
+{k:"mon",label:"Mon 16",date:"2026-11-16",title:"Monday · Bruges → home",city:"Bruges",
+ stay:{n:"Leaving from Hotel De Orangerie",q:"Hotel De Orangerie Brugge",ci:"",co:"Check-out by 11:00",note:"Late check-out until 13:00 possible at €25/h"},
+ ev:[
+ ["09:30","sight","s-begijn","On your doorstep, best early"],
+ ["10:45","bag","Check out (by 11:00)","<b>Ask reception to keep your bags until ~16:45.</b>"],
+ ["11:00","sight","s-halve","5 min. Book ahead"],
+ ["12:30","food","br-halvemaan","Or Gran Kaffee de Passage"],
+ ["14:00","food","br-choc","Shopping: chocolate, lace, beer. Last frites at the Markt?"],
+ ["16:45","bag","Collect bags from De Orangerie","🚶 18 min to Brugge station (taxi ~€12)"],
+ ["17:11","train",{dep:"17:11",dp:"Platform 9",arr:"18:36",ap:"Platform 2",from:"Brugge",to:"Brussels Airport",num:"IC 2816 (direct)",dur:"1h 25m",price:"from ~£18 each",alts:[["16:11","4","17:35","2","IC 2815 direct"],["17:11","9","18:36","2","IC 2816 direct"],["17:58","9","19:32","3","change Brussels-Midi"],["18:11","5","19:36","2","IC 2817 direct (tight)"]],rec:1}],
+ ["18:40","flight","Brussels Airport","Security and dinner airside."],
+ ["21:10","flight",{dep:"21:10",dp:"BRU",arr:"21:20",ap:"LHR T2",num:"Brussels Airlines SN2103",dur:"1h 10m"}]]}];
 const KEY="be-trip-2026-ticks";const ticks=JSON.parse(localStorage.getItem(KEY)||"{}");
-const item=(id,name,desc,o={})=>'<div class="card item"><input type="checkbox" data-id="'+id+'" '+(ticks[id]?"checked":"")+'><div class="b"><div class="n">'+name+(o.q?map(o.q):"")+'</div>'+(o.tags||"")+'<div class="m">'+desc+'</div>'+(o.img?'<details><summary>📸 Photo</summary><img loading="lazy" src="'+o.img+'"></details>':"")+'</div></div>';
-const tl=rows=>'<div class="card"><ul class="tl">'+rows.map(r=>'<li><span class="t">'+r[0]+'</span><span>'+r[1]+'</span></li>').join("")+'</ul></div>';
-const tbl=(head,rows,rec)=>'<div class="card" style="overflow-x:auto"><table><tr>'+head.map(h=>'<th>'+h+'</th>').join("")+'</tr>'+rows.map((r,i)=>'<tr'+(i===rec?' class="rec"':'')+'>'+r.map(c=>'<td>'+c+'</td>').join("")+'</tr>').join("")+'</table></div>';
-const T={street:'<span class="tag street">🍟 Street food</span>',rest:'<span class="tag rest">🍽️ Restaurant</span>',sweet:'<span class="tag sweet">🍫 Sweet</span>',drink:'<span class="tag drink">🍺 Drinks</span>'};
-
-// FOOD DATA: [id, city, type, name, desc, mapQuery]
-const FOOD=[
-["b-fritland","Brussels","street","Fritland","Classic paper cone of double-fried frites, 1 min from Grand-Place. Get andalouse or samurai sauce. Open late.","Fritland Rue Henri Maus Brussels"],
-["b-noordzee","Brussels","street","Noordzee / Mer du Nord","Standing-only fish bar on Place Sainte-Catherine: grey shrimp croquettes, fish soup, grilled scampi, glass of white wine at the counter. ~12 min walk. Go before it closes in the early evening.","Noordzee Mer du Nord Brussels"],
-["b-antoine","Brussels","street","Maison Antoine","Arguably Brussels' most famous friterie, on Place Jourdan. Further out (~20 min by metro/bus) — worth it only if you're keen.","Maison Antoine Place Jourdan Brussels"],
-["b-dandoy","Brussels","sweet","Maison Dandoy","Biscuit shop since 1829 (speculoos) with a waffle tearoom. Try a Brussels waffle (light, rectangular) AND a Liège waffle (sugary, chewy). 2 min from the hotel.","Maison Dandoy Rue au Beurre Brussels"],
-["b-marcolini","Brussels","sweet","Pierre Marcolini & Wittamer (Sablon)","Top-end chocolate on Place du Grand Sablon. Wittamer for pastries, Marcolini for pralines.","Pierre Marcolini Grand Sablon Brussels"],
-["b-finsiecle","Brussels","rest","Fin de Siècle","Hip, cheap Belgian classics (carbonnade, stoemp, rabbit). No reservations, historically cash-only — arrive early (~18:30) or queue.","Fin de Siecle Rue des Chartreux Brussels"],
-["b-nuet","Brussels","rest","Nüetnigenough","Small, cosy beer-cuisine place: beef cheek in beer, great Belgian beer list. Very popular — book.","Nuetnigenough Rue du Lombard Brussels"],
-["b-vincent","Brussels","rest","Restaurant Vincent","Old-school Brussels: you walk in through the kitchen; tiled dining room; steak, mussels, flambéed dishes. 3 min from hotel.","Restaurant Vincent Rue des Dominicains Brussels"],
-["b-leon","Brussels","rest","Chez Léon","Moules-frites institution on the Îlot Sacré. Touristy but reliable for a classic pot of mussels.","Chez Leon Rue des Bouchers Brussels"],
-["b-mortsubite","Brussels","drink","À la Mort Subite","1928 Art Deco café; order a gueuze or kriek (sour lambic beers) with a cheese plate. 3 min away.","A la Mort Subite Brussels"],
-["b-moeder","Brussels","drink","Moeder Lambic Fontainas","The beer nerds' pick: 40 taps of proper Belgian craft and lambic.","Moeder Lambic Fontainas Brussels"],
-["b-delirium","Brussels","drink","Delirium Café","Loud, touristy, 2,000+ beers in the Impasse de la Fidélité. Fun for one.","Delirium Cafe Brussels"],
-["g-max","Ghent","sweet","Max (Goudenleeuwplein)","Family waffle house dating back to the 1800s, by the Belfry. Brussels waffle with fresh cream.","Max Goudenleeuwplein Gent"],
-["g-cuberdon","Ghent","sweet","Cuberdon carts, Groentenmarkt","Purple cone-shaped raspberry sweets with a runny centre — Ghent's signature. Buy from the carts by the old market hall.","Groentenmarkt Gent"],
-["g-tierenteyn","Ghent","street","Tierenteyn-Verlent mustard","Mustard shop since 1790 on Groentenmarkt, ladled from wooden barrels into jars. Great cheap souvenir.","Tierenteyn-Verlent Gent"],
-["g-holyfood","Ghent","street","Holy Food Market","Food hall inside a 17th-century chapel: lots of stalls (Asian, Belgian, oysters, wine). Perfect for picky groups. ~10 min.","Holy Food Market Gent"],
-["g-balls","Ghent","street","Balls & Glory","Big stuffed meatballs with stoemp — quick, cheap, very Ghent.","Balls and Glory Gent"],
-["g-frites","Ghent","street","Frites at Korenmarkt","Several friteries around Korenmarkt; good mid-sightseeing fuel. Ask for mayo and a stoofvlees (beef stew) topping.","Frituur Korenmarkt Gent"],
-["g-amadeus","Ghent","rest","Amadeus (Patershol)","All-you-can-eat spare ribs in a characterful old house — on your hotel's doorstep. Book for Saturday.","Amadeus Plotersgracht Gent"],
-["g-pakhuis","Ghent","rest","Pakhuis","Huge, beautiful brasserie in a restored warehouse: oysters, Belgian classics, good wine. Book.","Pakhuis Gent"],
-["g-waterzooi","Ghent","rest","Try: Gentse waterzooi","Ghent's creamy chicken (or fish) stew. Ask in any Patershol restaurant — most serve it.","Patershol Gent restaurant"],
-["g-dulle","Ghent","drink","Dulle Griet","250+ beers on Vrijdagmarkt; order a Kwak and hand over a shoe as glass deposit. 3 min.","Dulle Griet Gent"],
-["g-waterhuis","Ghent","drink","Het Waterhuis aan de Bierkant","Canal-side beer café near Groentenmarkt with a big local list.","Het Waterhuis aan de Bierkant Gent"],
-["g-dreupel","Ghent","drink","'t Dreupelkot","Tiny jenever (Belgian gin) bar by the river — hundreds of flavours. Fun nightcap.","t Dreupelkot Gent"],
-["g-gruut","Ghent","drink","Gruut Brewery","City brewery making beer with herbs instead of hops. Tasting flight in the brewery bar.","Gruut Brewery Gent"],
-["br-vincent","Bruges","street","Chez Vincent","Bruges' best-loved frites, cooked in beef fat, by St Salvator's Cathedral — ~5 min from your hotel.","Chez Vincent Sint-Salvatorskerkhof Brugge"],
-["br-markt","Bruges","street","Frietkoten at the Markt","The two green frites stands at the foot of the Belfry. Touristy but iconic — eat them on the square.","Markt Brugge frietkot"],
-["br-choc","Bruges","sweet","The Chocolate Line","Experimental chocolatier (bacon, wasabi, Coca-Cola pralines) in a former palace. Also try Dumon for classics.","The Chocolate Line Brugge"],
-["br-hotchoc","Bruges","sweet","The Old Chocolate House","Hot chocolate made from a block of chocolate melted into hot milk, plus waffles. Perfect cold-November stop.","The Old Chocolate House Brugge"],
-["br-vlaamsche","Bruges","rest","De Vlaamsche Pot","Flemish home cooking: stew in Brugse Zot beer, eel in green sauce, mussels. Book.","De Vlaamsche Pot Brugge"],
-["br-cambrinus","Bruges","rest","Cambrinus","Beer brasserie near the Markt, ~400 beers and beer-based dishes. Good for Sunday dinner.","Cambrinus Brugge"],
-["br-dyver","Bruges","rest","Den Dyver","Smarter beer-pairing restaurant on the Dijver canal, 3 min from your hotel. Book.","Den Dyver Brugge"],
-["br-passage","Bruges","rest","Gran Kaffee de Passage","Cheap-and-cheerful candlelit Flemish brasserie; great value stoofvlees.","Gran Kaffee de Passage Brugge"],
-["br-halvemaan","Bruges","rest","Brasserie De Halve Maan","Lunch at the brewery after the tour; Brugse Zot on tap. 5 min from the hotel. Handy for Monday.","De Halve Maan Brugge"],
-["br-garre","Bruges","drink","De Garre","Hidden in a tiny alley off the Burg: their own strong Tripel van de Garre (limit 3!) served with cheese cubes.","De Garre Brugge"],
-["br-beertje","Bruges","drink","'t Brugs Beertje","Legendary small brown café with a huge Belgian list.","t Brugs Beertje Brugge"],
-["br-rosered","Bruges","drink","Café Rose Red","Pretty beer bar under hanging roses, by the Basilica.","Cafe Rose Red Brugge"]];
-const foodFor=(city,types)=>FOOD.filter(f=>f[1]===city&&(!types||types.includes(f[2]))).map(f=>item(f[0],f[3],f[4],{q:f[5],tags:T[f[2]]})).join("");
-
+const esc=s=>String(s);
+const gm=q=>"https://www.google.com/maps/search/?api=1&query="+encodeURIComponent(q);
+const hav=(a,b)=>{const R=6371e3,t=x=>x*Math.PI/180,d1=t(b[0]-a[0]),d2=t(b[1]-a[1]);const h=Math.sin(d1/2)**2+Math.cos(t(a[0]))*Math.cos(t(b[0]))*Math.sin(d2/2)**2;return 2*R*Math.asin(Math.sqrt(h));};
+const walk=m=>{const min=Math.round(m*1.25/80);return min<60?"🚶 "+min+" min":"🚇 "+(m/1000).toFixed(1)+" km";};
+let ME=null;
+function placeCard(id,extra,from){const p=PL[id];if(!p)return "";const c=COORDS[id];let d="";
+ const ref=ME||from;if(c&&ref){d='<span class="dist">'+walk(hav(ref,c))+(ME?" from you":" from hotel")+'</span> · ';}
+ return '<div class="pc"><input type="checkbox" class="tick" data-id="'+id+'" '+(ticks[id]?"checked":"")+' title="Add to my picks"><div class="b"><div class="n">'+p[2]+'</div><span class="tag t-'+p[1]+'">'+TL[p[1]]+'</span>'+(extra?'<span class="small">'+extra+'</span>':'')+'<div class="m">'+p[3]+'</div><div class="acts">'+d+'<a target="_blank" href="'+gm(p[4])+'">📍 Map</a><a target="_blank" href="https://www.google.com/maps/dir/?api=1&travelmode=walking&destination='+encodeURIComponent(p[4])+'">🧭 Walk there</a></div>'+(p[5]?'<details><summary>Photo</summary><img loading="lazy" src="'+p[5]+'"></details>':'')+'</div></div>';}
+function trCard(t){const alts=t.alts?'<details><summary>Other departures</summary><table><tr><th>Dep</th><th>Plat</th><th>Arr</th><th>Plat</th><th></th></tr>'+t.alts.map((a,i)=>'<tr'+(i===t.rec?' class="rec"':'')+'><td>'+a[0]+'</td><td>'+a[1]+'</td><td>'+a[2]+'</td><td>'+a[3]+'</td><td>'+a[4]+(i===t.rec?' ✓':'')+'</td></tr>').join("")+'</table></details>':"";
+ return '<div class="card tr"><div class="tt">'+(t.from?t.from+' → '+t.to:t.num)+'</div><div class="row"><span class="big">'+t.dep+'</span><span class="arrow"><span>'+t.dur+'</span></span><span class="big">'+t.arr+'</span></div><div class="pl"><span><b>'+t.dp+'</b></span><span><b>'+t.ap+'</b></span></div><div class="meta">'+(t.from?t.num+' · ':'')+(t.price||"")+'</div>'+(t.note?'<div class="meta">⚠️ '+t.note+'</div>':'')+alts+'</div>';}
+const ICON={flight:"✈️",train:"🚆",tram:"🚋",bus:"🚌",bag:"🧳",hotel:"🔑",food:"🍴",sight:"📍",market:"🛍️"};
+function dayHTML(d){const hc=COORDS[HOT[d.city]];
+ let h='<h2>'+d.title+'</h2><div class="card stay"><span class="ic">🏨</span><div><b>'+d.stay.n+'</b><div class="m">'+d.stay.note+'</div><div class="chips">'+(d.stay.ci?'<span class="chip">'+d.stay.ci+'</span>':'')+'<span class="chip">'+d.stay.co+'</span><a class="chip" target="_blank" href="'+gm(d.stay.q)+'">📍 Map</a></div></div></div>';
+ h+='<div class="tl">';d.ev.forEach((e,i)=>{const [tm,k,x,note]=e;let body;
+  if(typeof x==="object")body=trCard(x);
+  else if(PL[x]){const cc=COORDS[x];body='<div class="card">'+placeCard(x,note?" · "+note:"",d.k==="fri"?COORDS["h-nh"]:hc)+'</div>';}
+  else body=(k==="bag"?'<div class="bagnote"><div class="tt">'+x+'</div><div class="ds">'+(note||"")+'</div></div>':'<div class="card"><div class="tt">'+x+'</div><div class="ds">'+(note||"")+'</div></div>');
+  h+='<div class="ev k-'+k+'" data-t="'+d.date+'T'+tm+'"><div class="tm">'+tm+'</div><div class="rail"><div class="dot">'+ICON[k]+'</div></div><div class="bd">'+body+'</div></div>';});
+ h+='</div>';
+ const used=new Set(d.ev.map(e=>e[2]).filter(x=>typeof x==="string"));
+ const cityIdeas=Object.keys(PL).filter(id=>PL[id][0]===(d.k==="sat"?"Ghent":d.city)&&!used.has(id));
+ if(d.k==="sat"){cityIdeas.unshift("s-flagey","b-flagey","b-antoine");}
+ const ref=d.k==="sat"?COORDS["h-harm"]:hc;
+ if(ref)cityIdeas.sort((a,b)=>(COORDS[a]?hav(ref,COORDS[a]):9e9)-(COORDS[b]?hav(ref,COORDS[b]):9e9));
+ h+='<h3>More ideas nearby'+(ref?' · closest first':'')+'</h3><div class="list">'+cityIdeas.map(id=>'<div class="card">'+placeCard(id,"",PL[id][0]==="Brussels"?COORDS["h-nh"]:ref)+'</div>').join("")+'</div>';
+ return h;}
 const S={};
-S["Overview"]=()=>'<h2>Trip at a glance</h2>'+tbl(["Day","Where you sleep","Travel"],[
-["Fri 13","NH Brussels Carrefour de l\'Europe "+map("NH Brussels Carrefour de l'Europe"),"✈️ SN2094 LHR 11:05 → BRU 13:15, train to Bruxelles-Central"],
-["Sat 14","Hotel Harmony, Ghent "+map("Hotel Harmony Gent"),"🚆 Brussels → Ghent, 🚋 T1"],
-["Sun 15","Hotel De Orangerie, Bruges "+map("Hotel De Orangerie Brugge"),"🚋 T1, 🚆 Ghent → Bruges"],
-["Mon 16","—","🚆 Bruges → Airport 17:11, ✈️ SN2103 BRU 21:10 → LHR 21:20"]])+
-'<div class="warn">⚠️ <b>Basic fare:</b> one personal item each only (max 40×30×15 cm) — add a cabin bag online before check-in. Online check-in opens ~11:05 Thu 12 Nov.</div>'+
-'<h3>Tickets</h3><div class="card m">🚆 <b>Trains:</b> buy in the <b>SNCB app</b> (no tapping a card on trains). Prices quoted are Trainline “from” estimates per person.<br>🚋 <b>Trams/buses (De Lijn):</b> tap a contactless card/phone on the white reader as you board, once per person — <b>€3</b>, valid 60 min.<br>⏱️ Times are the real timetable pulled 10 Nov — re-check platforms on the boards on the day.</div>'+
-'<h3>Heads-up</h3><div class="card m">• Many Belgian restaurants close on Sunday and/or Monday — check the 📍 Map link for hours and book ahead for Sat dinner in Ghent.<br>• Groeningemuseum (Bruges) closes Mondays → do it Sunday.<br>• Sunset ~16:45. Expect 5–10 °C and drizzle — bring layers.</div>';
-
-S["Fri 13"]=()=>'<h2>Fri 13 Nov · London → Brussels</h2>'+tl([
-["09:00","Arrive at Heathrow T2. Scan your boarding pass at security ≥30 min before departure."],
-["11:05","✈️ <b>SN2094</b> LHR → Brussels, arrive 13:15"],
-["13:45","Passport control, then go downstairs to the airport train station"],
-["13:54","🚆 <b>Platform 3</b> → Bruxelles-Central 14:12, platform 4 (EC 9232)"],
-["14:20",'<span class="bag">🧳 Walk 3 min to the NH. If the room isn\'t ready, <b>leave your bags at reception</b></span>'],
-["14:30","🧇 Waffle at Maison Dandoy, Galeries Royales, Grand-Place"],
-["16:00","🍫 Sablon chocolate shops, then 🌅 Mont des Arts at sunset (~16:45)"],
-["17:30","🦐 Noordzee on Place Sainte-Catherine for shrimp croquettes (street-food starter)"],
-["19:30","🍽️ Dinner (Fin de Siècle / Nüetnigenough / Vincent), then 🍺 Mort Subite or Moeder Lambic, then Grand-Place lit up"]])+
-'<h3>🚆 Airport → Bruxelles-Central (17–23 min · from ~£9 each)</h3>'+tbl(["Dep","Plat","Arr","Plat","Train"],[["13:42","3","14:05","4","IC 1935"],["13:54","3","14:12","4","EC 9232 ✅"],["13:57","1","14:15","2","IC 2235"],["14:13","3","14:31","4","IC 2337"],["14:24","2","14:42","2","IC 2836"]],1)+
-'<h3>🏛️ Things to do</h3>'+
-item("s-grand","Grand-Place","2 min from the hotel. Gilded guildhalls; free. Go back after dark when it\'s lit up.",{q:"Grand-Place Brussels",img:IMG.grand})+
-item("s-gal","Galeries Royales Saint-Hubert","3 min. 1840s glass-roofed arcade — Neuhaus (inventors of the praline), Mary, Mokafé.",{q:"Galeries Royales Saint-Hubert",img:IMG.gal})+
-item("s-mont","Mont des Arts","5 min. Gardens and the best view over the city — ideal at sunset.",{q:"Mont des Arts Brussels",img:IMG.mont})+
-item("s-sablon","Sablon","10 min. Posh chocolate area, Gothic church, antique shops.",{q:"Place du Grand Sablon",img:IMG.sablon})+
-item("s-mp","Manneken Pis","5 min. Tiny, famous — quick look and move on.",{q:"Manneken Pis",img:IMG.mp})+
-item("s-atom","Atomium (further out)","~30 min on metro 6 to Heysel. Iconic but probably too far for a half day.",{q:"Atomium",img:IMG.atom})+
-'<h3>🍽️ Food & drink in Brussels</h3>'+foodFor("Brussels");
-
-S["Sat 14"]=()=>'<h2>Sat 14 Nov · Brussels → Ghent</h2>'+tl([
-["09:15",'<span class="bag">🧳 Check out of the NH and take your bags</span>, walk 3 min to Bruxelles-Central'],
-["09:43","🚆 <b>Platform 2</b> → Gent-Sint-Pieters 10:19, platform 12 (IC 2831)"],
-["10:21","🚋 Tram <b>T1</b> from tram platform 2 outside the station → Koophandelsplein 10:33, then walk ~12 min. With bags, a taxi is easier (~10 min, roughly €15–20)."],
-["10:45",'<span class="bag">🧳 Hotel Harmony: <b>leave your bags at reception</b></span>'],
-["11:00","🏰 Gravensteen castle (2 min away)"],
-["12:30","🍬 Groentenmarkt: cuberdons and Tierenteyn mustard, then lunch at Holy Food Market or Balls & Glory"],
-["14:00","🖼️ St Bavo's (<i>Ghent Altarpiece</i> — book) and the Belfry, then 🧇 Max waffles next door"],
-["16:00","🚤 Boat tour, or a dusk walk on Graslei, Korenlei and St Michael\'s Bridge"],
-["17:00","🔑 Back to the hotel to check in and freshen up"],
-["19:30","🍽️ Dinner in Patershol (Amadeus / Pakhuis, waterzooi) → 🍺 Dulle Griet → 🥃 't Dreupelkot"]])+
-'<div class="warn">🚧 Tram works: the planner routes T1 to Koophandelsplein (not Gravensteen) right now — expect the 12-min walk at the end. T1 every ~5 min: 10:21, 10:26, 10:31, 10:36.</div>'+
-'<h3>🚆 Bruxelles-Central → Gent-Sint-Pieters (35–36 min · from ~£7 each)</h3>'+tbl(["Dep","Plat","Arr","Plat","Train"],[["09:43","2","10:19","12","IC 2831 ✅"],["09:56","2","10:31","11","IC 531"],["10:20","4","10:56","12","IC 1531"],["10:43","2","11:19","12","IC 2832"],["10:56","2","11:31","12","IC 532"],["11:20","4","11:56","12","IC 1532"]],0)+
-'<h3>🏰 Things to do</h3>'+
-item("s-grav","Gravensteen","2 min. Real moated 1100s castle; ~1.5 h; funny audio guide, great view from the battlements.",{q:"Gravensteen Gent",img:IMG.grav})+
-item("s-gras","Graslei & Korenlei","5 min. Medieval guild houses on the water — best at dusk.",{q:"Graslei Gent",img:IMG.gras})+
-item("s-mich","St Michael's Bridge","5 min. The classic view of Ghent's three towers.",{q:"Sint-Michielsbrug Gent",img:IMG.koren})+
-item("s-bavo","St Bavo's Cathedral — Ghent Altarpiece","8 min. Van Eyck, 1432. Book a time online; the AR tour is excellent.",{q:"Sint-Baafskathedraal Gent",img:IMG.altar})+
-item("s-gbel","Belfry of Ghent","8 min. Lift most of the way up, 360° view. Next to St Bavo\'s.",{q:"Belfort Gent",img:IMG.gbel})+
-item("s-gboat","Boat tour","From Graslei/Korenlei, ~40 min. Easiest way to see the city.",{q:"Boat tour Graslei Gent"})+
-item("s-werre","Werregarenstraat (graffiti alley)","5 min. Legal street-art alley, constantly repainted.",{q:"Werregarenstraat Gent"})+
-item("s-glight","Evening light walk","Ghent's lighting plan makes the old centre spectacular after dark.",{q:"Korenlei Gent"})+
-'<h3>🍽️ Food & drink in Ghent</h3>'+foodFor("Ghent");
-
-S["Sun 15"]=()=>'<h2>Sun 15 Nov · Ghent → Bruges</h2>'+tl([
-["09:35",'<span class="bag">🧳 Check out of Harmony and take your bags</span>, walk 12 min to Koophandelsplein'],
-["09:50","🚋 Tram <b>T1</b> → Gent-Sint-Pieters 10:01 (also 09:45, 09:56)"],
-["10:12","🚆 <b>Platform 7</b> → Brugge 10:36, platform 10 (IC 1830)"],
-["10:40","🚌 Bus 1 from bus platform A1 → Sint-Salvatorskerk 10:43, then walk 6 min. Or walk the whole way past Minnewater (18 min)."],
-["10:50",'<span class="bag">🧳 Hotel De Orangerie: <b>leave your bags at reception</b></span>'],
-["11:00","⛪ Church of Our Lady (Michelangelo), then 🖼️ Groeningemuseum — <b>today only, it\'s closed Mondays</b>"],
-["13:00","🍟 Frites at Chez Vincent, 5 min from the hotel"],
-["14:00","📸 Rozenhoedkaai → Burg and the Basilica → Markt and the Belfry (book a slot)"],
-["16:00","☕ Hot chocolate at The Old Chocolate House, then 🍫 The Chocolate Line"],
-["17:00","🔑 Back to the hotel to check in"],
-["19:30","🍽️ Dinner (De Vlaamsche Pot / Cambrinus / Den Dyver) → 🍺 De Garre or 't Brugs Beertje"]])+
-'<div class="warn">⚠️ Skip the 09:43 L train from Ghent — it\'s a 41-minute stopper.</div>'+
-'<h3>🚆 Gent-Sint-Pieters → Brugge (22–26 min · from ~£5 each)</h3>'+tbl(["Dep","Plat","Arr","Plat","Train"],[["09:37","11","09:59","10","IC 530"],["10:00","12","10:26","10","IC 1530"],["10:12","7","10:36","10","IC 1830 ✅"],["10:22","12","10:52","2","IC 2831"],["10:37","11","10:59","10","IC 531"]],2)+
-'<div class="small">🚌 Buses from Brugge station platform A1 → Sint-Salvatorskerk: 10:40 (1), 10:48 (2), 10:55 (1), 11:03 (2) · €3 each</div>'+
-'<h3>🏛️ Things to do</h3>'+
-item("s-ourlady","Church of Our Lady","3 min. Michelangelo\'s <i>Madonna and Child</i>, the only one of his sculptures to leave Italy in his lifetime.",{q:"Onze-Lieve-Vrouwekerk Brugge",img:IMG.ourlady})+
-item("s-groen","Groeningemuseum","3 min. Van Eyck, Bosch, Memling in 1–1.5 h. <b>Closed Mondays.</b>",{q:"Groeningemuseum",img:IMG.groen})+
-item("s-rozen","Rozenhoedkaai","5 min. The postcard view of Bruges.",{q:"Rozenhoedkaai Brugge"})+
-item("s-markt","Markt & Belfry","10 min. 366 steps, view over the rooftops — book a time slot.",{q:"Belfort Brugge",img:IMG.bbel})+
-item("s-burg","Burg & Basilica of the Holy Blood","10 min. Gothic city hall; chapel holding a relic said to be Christ\'s blood.",{q:"Heilig-Bloedbasiliek Brugge",img:IMG.basil})+
-item("s-boat","Canal boat","The season usually winds down mid-November — check at the jetties.",{q:"Rozenhoedkaai boat Brugge"})+
-'<h3>🍽️ Food & drink in Bruges</h3>'+foodFor("Bruges");
-
-S["Mon 16"]=()=>'<h2>Mon 16 Nov · Bruges → home</h2>'+tl([
-["09:30",'<span class="bag">🧳 Check out and <b>ask reception to keep your bags until ~16:45</b></span>'],
-["09:45","🌳 Begijnhof and Minnewater — quiet in the morning, on your doorstep"],
-["11:00","🍺 De Halve Maan brewery tour (5 min, book ahead)"],
-["12:30","🍽️ Long lunch — brewery brasserie, or Gran Kaffee de Passage"],
-["14:00","🛍️ Shopping for chocolate, lace and beer, plus a last frites/waffle stop"],
-["16:45",'<span class="bag">🧳 <b>Collect your bags</b> from the hotel</span>'],
-["16:50","🚶 Walk 18 min to Brugge station (taxi ~€12)"],
-["17:11","🚆 <b>Platform 9</b> → Brussels Airport 18:36, platform 2 (IC 2816, direct)"],
-["18:40","Bag drop, security, dinner airside"],
-["21:10","✈️ <b>SN2103</b> BRU → LHR, arrive 21:20"]])+
-'<div class="warn">⚠️ Groeningemuseum and many museums are closed on Mondays. Some restaurants are too — check the map links.</div>'+
-'<h3>🚆 Brugge → Brussels Airport (from ~£18 each)</h3>'+tbl(["Dep","Plat","Arr","Plat","Notes"],[["16:11","4","17:35","2","IC 2815 direct"],["17:11","9","18:36","2","IC 2816 direct ✅"],["17:58","9","19:32","3","change at Brussels-Midi"],["18:11","5","19:36","2","IC 2817 direct (backup, tight)"]],1)+
-'<h3>Things to do Monday</h3>'+
-item("s-halve","De Halve Maan brewery","5 min. Family brewery since 1856 with a beer pipeline running under the city. The tour ends with a tasting.",{q:"De Halve Maan Brugge"})+
-item("s-begijn","Begijnhof & Minnewater","On your doorstep. White-walled courtyard and the \"Lake of Love\".",{q:"Begijnhof Brugge"})+
-item("s-windmill","Windmills on the Kruisvest","~25 min walk on the ramparts. Nice if the weather is dry.",{q:"Sint-Janshuismolen Brugge"});
-
-S["🍴 All food"]=()=>'<h2>All food & drink</h2><div class="small">Filter by type or city. Tick the places you want to go — ticks are saved on this device.</div><div class="filters" id="ft"></div><div class="filters" id="fc"></div><div id="flist"></div>';
-S["✅ My picks"]=()=>'<h2>Your ticked list</h2><div id="picks"></div><button onclick="if(confirm(\'Clear all ticks?\')){localStorage.removeItem(KEY);location.reload()}" style="margin-top:12px;background:#3a1d14;color:#fff;border:1px solid #6b3a26;border-radius:8px;padding:8px 12px">Clear ticks</button>';
-
+S["Overview"]=()=>'<h2>Trip at a glance</h2><div class="card"><table class="ovr"><tr><th>Day</th><th>Sleep</th><th>Check-in / out</th></tr><tr><td>Fri 13</td><td>NH Brussels Carrefour de l\'Europe</td><td>in 15:00 · out 12:00</td></tr><tr><td>Sat 14</td><td>Hotel Harmony, Ghent</td><td>in 15:00 · out 11:00</td></tr><tr><td>Sun 15</td><td>Hotel De Orangerie, Bruges</td><td>in 15:00 · out 11:00</td></tr><tr><td>Mon 16</td><td colspan="2">✈️ SN2103 BRU 21:10 → LHR 21:20</td></tr></table></div>'+
+'<div class="warn">⚠️ <b>Basic fare:</b> one personal item each (max 40×30×15 cm). Add a cabin bag online before check-in, which opens ~11:05 Thu 12 Nov.</div>'+
+'<h3>Tickets</h3><div class="card small">🚆 <b>Trains:</b> buy in the SNCB app (you can\'t tap a card on trains). Prices are Trainline "from" estimates per person.<br>🚋 <b>Trams/buses:</b> tap a contactless card on the white reader as you board, once per person, €3 for 60 min.<br>⏱️ Times are the real timetable pulled 10 Nov; recheck platforms on the boards.</div>'+
+'<h3>Heads-up</h3><div class="card small">• Hotel times are the hotels\' standard published times; early check-in isn\'t guaranteed, so the plan drops bags first.<br>• Many restaurants close Sun and/or Mon; check hours via 📍 Map and book Sat dinner in Ghent.<br>• Brussels\' Christmas market (Winter Wonders) only opens 27 Nov, so you\'ll miss it.<br>• Sunset ~16:45; expect 5–10 °C and drizzle.</div>';
+DAYS.forEach(d=>S[d.label]=()=>dayHTML(d));
+S["🗺️ Map"]=()=>'<h2>Map</h2><p class="sub">Tap a pin for details. Blue = hotels, orange = food, green = markets, grey = sights.</p><div class="filters" id="mf"></div><div id="map"></div>';
+S["🍴 Food"]=()=>'<h2>Food & drink</h2><p class="sub">Filter, or tap “Near me” on the trip to sort by walking distance.</p><div class="filters" id="ft"></div><div class="filters" id="fc"></div><div id="flist" class="list"></div>';
+S["✓ My picks"]=()=>'<h2>My picks</h2><p class="sub">Everything you\'ve ticked. Saved on this device only.</p><div id="picks" class="list"></div>';
 const nav=document.getElementById("nav"),main=document.getElementById("main");
-Object.keys(S).forEach((k,i)=>{const b=document.createElement("button");b.textContent=k;b.onclick=()=>show(k);nav.appendChild(b);const s=document.createElement("section");s.id="sec-"+i;s.dataset.k=k;main.appendChild(s);});
-function show(k){[...nav.children].forEach(b=>b.classList.toggle("on",b.textContent===k));[...main.children].forEach(s=>{s.classList.toggle("on",s.dataset.k===k);if(s.dataset.k===k){s.innerHTML=S[k]();}});if(k==="🍴 All food")food();if(k==="✅ My picks")picks();bind();scrollTo(0,0);location.hash=encodeURIComponent(k);}
+Object.keys(S).forEach(k=>{const b=document.createElement("button");b.textContent=k;b.onclick=()=>show(k);nav.appendChild(b);const s=document.createElement("section");s.dataset.k=k;main.appendChild(s);});
+let cur="";
+function show(k){cur=k;[...nav.children].forEach(b=>b.classList.toggle("on",b.textContent===k));[...main.children].forEach(s=>{const on=s.dataset.k===k;s.classList.toggle("on",on);if(on)s.innerHTML=S[k]();});
+ if(k==="🍴 Food")food();if(k==="✓ My picks")picks();if(k==="🗺️ Map")mapInit();bind();markNow();history.replaceState(null,"","#"+encodeURIComponent(k));window.scrollTo(0,0);}
 let fT="all",fC="all";
 function food(){const ft=document.getElementById("ft"),fc=document.getElementById("fc");
-ft.innerHTML=[["all","All"],["street","🍟 Street food"],["rest","🍽️ Restaurants"],["sweet","🍫 Sweet"],["drink","🍺 Drinks"]].map(([v,l])=>'<button data-v="'+v+'" class="'+(fT===v?"on":"")+'">'+l+'</button>').join("");
-fc.innerHTML=["all","Brussels","Ghent","Bruges"].map(v=>'<button data-v="'+v+'" class="'+(fC===v?"on":"")+'">'+(v==="all"?"All cities":v)+'</button>').join("");
-ft.onclick=e=>{if(e.target.dataset.v){fT=e.target.dataset.v;food();}};fc.onclick=e=>{if(e.target.dataset.v){fC=e.target.dataset.v;food();}};
-const L=FOOD.filter(f=>(fT==="all"||f[2]===fT)&&(fC==="all"||f[1]===fC));
-let out="",last="";L.forEach(f=>{if(f[1]!==last){out+="<h3>"+f[1]+"</h3>";last=f[1];}out+=item(f[0],f[3],f[4],{q:f[5],tags:T[f[2]]});});
-document.getElementById("flist").innerHTML=out||'<div class="m">Nothing matches.</div>';bind();}
-function picks(){const all=[...main.querySelectorAll("section")];let tmp=document.createElement("div");tmp.innerHTML=Object.keys(S).filter(k=>!k.startsWith("✅")&&!k.startsWith("🍴")).map(k=>S[k]()).join("")+FOOD.map(f=>item(f[0],f[3],f[4],{q:f[5],tags:T[f[2]]})).join("");
-const seen=new Set();const cards=[...tmp.querySelectorAll(".item")].filter(c=>{const id=c.querySelector("input").dataset.id;if(!ticks[id]||seen.has(id))return false;seen.add(id);return true;});
-document.getElementById("picks").innerHTML=cards.length?cards.map(c=>c.outerHTML).join(""):'<div class="m">Nothing ticked yet — tick things on the day tabs or under All food.</div>';bind();}
-function bind(){main.querySelectorAll('input[type=checkbox]').forEach(cb=>{cb.checked=!!ticks[cb.dataset.id];cb.onchange=()=>{ticks[cb.dataset.id]=cb.checked;if(!cb.checked)delete ticks[cb.dataset.id];localStorage.setItem(KEY,JSON.stringify(ticks));};});}
-const h=decodeURIComponent(location.hash.slice(1));show(S[h]?h:"Overview");
+ ft.innerHTML=[["all","All"],["street","🍟 Street food"],["rest","🍽️ Restaurants"],["sweet","🍫 Sweet"],["drink","🍺 Drinks"],["market","🛍️ Markets"]].map(([v,l])=>'<button data-v="'+v+'" class="'+(fT===v?"on":"")+'">'+l+'</button>').join("");
+ fc.innerHTML=["all","Brussels","Ghent","Bruges"].map(v=>'<button data-v="'+v+'" class="'+(fC===v?"on":"")+'">'+(v==="all"?"All cities":v)+'</button>').join("")+'<button id="near">📍 Near me</button>';
+ ft.onclick=e=>{if(e.target.dataset.v){fT=e.target.dataset.v;food();}};fc.onclick=e=>{if(e.target.dataset.v){fC=e.target.dataset.v;food();}};
+ document.getElementById("near").onclick=()=>locate(food);
+ let L=Object.keys(PL).filter(id=>{const p=PL[id];return p[1]!=="sight"&&(fT==="all"||p[1]===fT)&&(fC==="all"||p[0]===fC);});
+ let out="";if(ME){L.sort((a,b)=>(COORDS[a]?hav(ME,COORDS[a]):9e9)-(COORDS[b]?hav(ME,COORDS[b]):9e9));out=L.map(id=>'<div class="card">'+placeCard(id,"")+'</div>').join("");}
+ else{let last="";L.forEach(id=>{const c=PL[id][0];if(c!==last){out+="<h3>"+c+"</h3>";last=c;}out+='<div class="card">'+placeCard(id,"",COORDS[HOT[c]])+'</div>';});}
+ document.getElementById("flist").innerHTML=out||'<p class="sub">Nothing matches.</p>';bind();}
+function picks(){const L=Object.keys(PL).filter(id=>ticks[id]);document.getElementById("picks").innerHTML=L.length?L.map(id=>'<div class="card">'+placeCard(id,"· "+PL[id][0],COORDS[HOT[PL[id][0]]])+'</div>').join(""):'<p class="sub">Nothing ticked yet. Tick ✓ places on the day tabs or under Food.</p>';bind();}
+function bind(){main.querySelectorAll(".tick").forEach(cb=>{cb.checked=!!ticks[cb.dataset.id];cb.onchange=()=>{if(cb.checked)ticks[cb.dataset.id]=1;else delete ticks[cb.dataset.id];localStorage.setItem(KEY,JSON.stringify(ticks));main.querySelectorAll('.tick[data-id="'+cb.dataset.id+'"]').forEach(o=>o.checked=cb.checked);};});}
+function locate(cb){if(!navigator.geolocation){alert("Location not available");return;}navigator.geolocation.getCurrentPosition(p=>{ME=[p.coords.latitude,p.coords.longitude];cb();},()=>alert("Couldn't get your location"),{enableHighAccuracy:true,timeout:10000});}
+let MAP=null,mfC="all";
+function mapInit(){const mf=document.getElementById("mf");mf.innerHTML=["all","Brussels","Ghent","Bruges","✓ Picks"].map(v=>'<button data-v="'+v+'" class="'+(mfC===v?"on":"")+'">'+(v==="all"?"Everything":v)+'</button>').join("");mf.onclick=e=>{if(e.target.dataset.v){mfC=e.target.dataset.v;show("🗺️ Map");}};
+ if(typeof L==="undefined"){document.getElementById("map").innerHTML='<p class="sub" style="padding:12px">Map library didn\'t load.</p>';return;}
+ MAP=L.map("map");L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png",{attribution:"© OpenStreetMap contributors © CARTO",maxZoom:19}).addTo(MAP);
+ const col={sight:"#8793a8",street:"#ef7d22",rest:"#ef7d22",sweet:"#d63b74",drink:"#1a9e5c",market:"#8bb12e"};const pts=[];
+ Object.keys(PL).forEach(id=>{const p=PL[id],c=COORDS[id];if(!c)return;if(mfC==="✓ Picks"?!ticks[id]:(mfC!=="all"&&p[0]!==mfC))return;
+  L.circleMarker(c,{radius:7,color:"#fff",weight:2,fillColor:col[p[1]],fillOpacity:1}).addTo(MAP).bindPopup('<b>'+p[2]+'</b><br><span style="font-size:12px">'+TL[p[1]]+'</span><br><a target="_blank" href="'+gm(p[4])+'">Open in Google Maps</a>');pts.push(c);});
+ [["h-nh","NH Brussels","Brussels"],["h-harm","Hotel Harmony","Ghent"],["h-oran","Hotel De Orangerie","Bruges"]].forEach(([id,n,c])=>{if(COORDS[id]&&(mfC==="all"||mfC===c||mfC==="✓ Picks")){L.circleMarker(COORDS[id],{radius:10,color:"#fff",weight:3,fillColor:"#2d6cdf",fillOpacity:1}).addTo(MAP).bindPopup("🏨 <b>"+n+"</b>");pts.push(COORDS[id]);}});
+ if(ME){L.circleMarker(ME,{radius:8,color:"#fff",weight:3,fillColor:"#e53935",fillOpacity:1}).addTo(MAP).bindPopup("You are here");}
+ if(pts.length)MAP.fitBounds(pts,{padding:[30,30]});else MAP.setView([51.05,3.73],9);}
+function bxNow(){const s=new Date().toLocaleString("sv-SE",{timeZone:"Europe/Brussels"}).replace(" ","T").slice(0,16);return s;}
+function markNow(){const now=bxNow();const evs=[...main.querySelectorAll(".ev")];let nextSet=false;evs.forEach((e,i)=>{e.classList.remove("now","past");const nx=evs[i+1];if(nx&&nx.dataset.t<=now)e.classList.add("past");else if(!nextSet&&e.dataset.t.slice(0,10)===now.slice(0,10)&&(e.dataset.t<=now||!nx)){e.classList.add("now");nextSet=true;}});}
+const fab=document.getElementById("fab");const today=bxNow().slice(0,10);const todayDay=DAYS.find(d=>d.date===today);
+if(todayDay){fab.style.display="block";fab.onclick=()=>{show(todayDay.label);setTimeout(()=>{const n=main.querySelector(".ev.now")||main.querySelector(".ev:not(.past)");if(n)n.scrollIntoView({behavior:"smooth",block:"center"});},50);};}
+setInterval(markNow,60000);
+const h=decodeURIComponent(location.hash.slice(1));show(S[h]?h:(todayDay?todayDay.label:"Overview"));
 </script></body></html>
