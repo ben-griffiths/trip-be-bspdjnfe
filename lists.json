@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-10T23:42:13.924705Z",
+ "updated": "2026-11-10T23:54:22.348Z",
  "lists": {
   "Brussels": [
    {
@@ -64,7 +64,11 @@
      }
     },
     "det_at": 1794353992.057686,
-    "img": null
+    "img": {
+     "src": "img/8571324740010029913.jpg",
+     "kind": "photo",
+     "credit": "Homemade Italian Pastries & Coffee | Domenica Brussels | Brussels"
+    }
    },
    {
     "name": "Ralph",
@@ -120,7 +124,11 @@
      }
     },
     "det_at": 1794353992.057686,
-    "img": null
+    "img": {
+     "src": "img/1109108161551380672.jpg",
+     "kind": "photo",
+     "credit": "RALPH"
+    }
    },
    {
     "name": "RAMBO Washington",
@@ -187,7 +195,11 @@
      }
     },
     "det_at": 1794353992.057686,
-    "img": null
+    "img": {
+     "src": "img/15107224357943264223.jpg",
+     "kind": "photo",
+     "credit": "Restaurant Rambo à Bruxelles - Fooding"
+    }
    },
    {
     "name": "Hotel NH Brussels Carrefour de l'Europe",
@@ -251,7 +263,11 @@
      }
     },
     "det_at": 1794353992.057686,
-    "img": null
+    "img": {
+     "src": "img/11302687989790057270.jpg",
+     "kind": "photo",
+     "credit": "LE BUGATTI, Ixelles - Menu, Prices & Restaurant Reviews - Tripadvisor"
+    }
    },
    {
     "name": "Le Rendez-Vous Brasserie Restaurant",
@@ -308,7 +324,11 @@
      }
     },
     "det_at": 1794353992.057686,
-    "img": null
+    "img": {
+     "src": "img/6111646406630472782.jpg",
+     "kind": "photo",
+     "credit": "LE RENDEZ-VOUS DES ARTISTES, Saint-Gilles - Menu, Prix & Restaurant ..."
+    }
    },
    {
     "name": "Brasserie Boemvol",
@@ -370,7 +390,11 @@
      }
     },
     "det_at": 1794353992.057686,
-    "img": null
+    "img": {
+     "src": "img/6216445408517881932.jpg",
+     "kind": "photo",
+     "credit": "Boemvol : la brasserie belge qui réinvente le festin avec panache"
+    }
    },
    {
     "name": "Mendo",
@@ -432,7 +456,11 @@
      }
     },
     "det_at": 1794353992.057686,
-    "img": null
+    "img": {
+     "src": "img/614099865317596125.jpg",
+     "kind": "photo",
+     "credit": "MENDO, Brussels - Restaurant Reviews, Photos & Phone Number - Tripadvisor"
+    }
    },
    {
     "name": "Koku Ramen",
@@ -495,7 +523,11 @@
      }
     },
     "det_at": 1794353992.057686,
-    "img": null
+    "img": {
+     "src": "img/4222528654632780658.jpg",
+     "kind": "photo",
+     "credit": "citylikeyou — Koku Ramen — Brussels by Romain Tardy"
+    }
    },
    {
     "name": "Barracuda",
@@ -587,7 +619,11 @@
      }
     },
     "det_at": 1794353992.057686,
-    "img": null
+    "img": {
+     "src": "img/7795377989493462480.jpg",
+     "kind": "photo",
+     "credit": "Barracuda | Visit Brussels"
+    }
    },
    {
     "name": "Old Boy",
@@ -670,7 +706,11 @@
      }
     },
     "det_at": 1794353992.057686,
-    "img": null
+    "img": {
+     "src": "img/9746207812909077969.jpg",
+     "kind": "photo",
+     "credit": "Tips from a waitress - Old Boy restaurant Ixelles, Brussels, Belgium ..."
+    }
    }
   ],
   "Ghent": [
@@ -736,7 +776,11 @@
      }
     },
     "det_at": 1794353992.057686,
-    "img": null
+    "img": {
+     "src": "img/3647443293097410601.jpg",
+     "kind": "photo",
+     "credit": "café de loge te Gent - architect giovanni declercq"
+    }
    },
    {
     "name": "Tartelette",
@@ -790,7 +834,11 @@
      }
     },
     "det_at": 1794353992.057686,
-    "img": null
+    "img": {
+     "src": "img/13467070660307744325.jpg",
+     "kind": "photo",
+     "credit": "Tartelette, Gent - Restaurantbewertungen"
+    }
    },
    {
     "name": "Soggy Bun",
@@ -843,7 +891,11 @@
      }
     },
     "det_at": 1794353992.057686,
-    "img": null
+    "img": {
+     "src": "img/12814528802184532586.jpg",
+     "kind": "photo",
+     "credit": "Soggy Bun website"
+    }
    },
    {
     "name": "Fuego Lento - Pastrami and Pulled Pork Sandwiches",
@@ -977,7 +1029,11 @@
      }
     },
     "det_at": 1794353992.057686,
-    "img": null
+    "img": {
+     "src": "img/3244214069350929798.jpg",
+     "kind": "photo",
+     "credit": "Zuru Zuru Ramen, Gent - Menu van het restaurant, prijzen en recensies"
+    }
    },
    {
     "name": "Martino",
@@ -1029,7 +1085,11 @@
      }
     },
     "det_at": 1794353992.057686,
-    "img": null
+    "img": {
+     "src": "img/1706593725860988771.jpg",
+     "kind": "photo",
+     "credit": "Martino | Visit Gent"
+    }
    },
    {
     "name": "Mémé Gusta",
@@ -1102,7 +1162,11 @@
      }
     },
     "det_at": 1794353992.057686,
-    "img": null
+    "img": {
+     "src": "img/17083962374535094909.jpg",
+     "kind": "photo",
+     "credit": "Mémé Gusta | Visit Gent"
+    }
    }
   ],
   "Bruges": [
@@ -1172,7 +1236,11 @@
      }
     },
     "det_at": 1794353992.057686,
-    "img": null
+    "img": {
+     "src": "img/7322726804122268154.jpg",
+     "kind": "photo",
+     "credit": "Malesherbes | Brugge"
+    }
    },
    {
     "name": "Petit Patron (Le)",
@@ -1237,7 +1305,11 @@
      }
     },
     "det_at": 1794353992.057686,
-    "img": null
+    "img": {
+     "src": "img/761386293703903304.jpg",
+     "kind": "photo",
+     "credit": "Le Petit Patron | Brugge"
+    }
    },
    {
     "name": "Laurence Take Away",
@@ -1257,7 +1329,11 @@
      "hours": {}
     },
     "det_at": 1794353992.057686,
-    "img": null
+    "img": {
+     "src": "img/12780045466001773025.jpg",
+     "kind": "photo",
+     "credit": "LAURENCE TAKE AWAY, Bruges - Restaurant Reviews, Photos & Phone Number ..."
+    }
    },
    {
     "name": "Chez Albert - Gauffres - Waffles",
@@ -1321,7 +1397,11 @@
      }
     },
     "det_at": 1794353992.057686,
-    "img": null
+    "img": {
+     "src": "img/2638871526101653409.jpg",
+     "kind": "photo",
+     "credit": "CHEZ ALBERT - Updated June 2026 - 265 Photos & 213 Reviews ..."
+    }
    },
    {
     "name": "Rosary Quay",
@@ -1421,7 +1501,11 @@
      }
     },
     "det_at": 1794353992.057686,
-    "img": null
+    "img": {
+     "src": "img/7293452383320493496.jpg",
+     "kind": "photo",
+     "credit": "KAFFEE ROGER, Bruges - Restaurant Avis, Numéro de Téléphone & Photos ..."
+    }
    },
    {
     "name": "Lion Belge - Brugge",
@@ -1491,7 +1575,11 @@
      }
     },
     "det_at": 1794353992.057686,
-    "img": null
+    "img": {
+     "src": "img/15790159966955316380.jpg",
+     "kind": "photo",
+     "credit": "Lion Belge, Bruges - Restaurant Avis, Numéro de Téléphone & Photos ..."
+    }
    },
    {
     "name": "ONSLOW",
@@ -1561,7 +1649,11 @@
      }
     },
     "det_at": 1794353992.057686,
-    "img": null
+    "img": {
+     "src": "img/12687416456309968077.jpg",
+     "kind": "photo",
+     "credit": "ONSLOW, Brugge - Restaurantbeoordelingen, foto's en telefoonnummer"
+    }
    },
    {
     "name": "Boniface Bridge",
@@ -1626,9 +1718,9 @@
     },
     "det_at": 1794353992.057686,
     "img": {
-     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/Belgique_Bruges_Dijver_Arentspark_Pont_Saint-Boniface_-_panoramio.jpg/330px-Belgique_Bruges_Dijver_Arentspark_Pont_Saint-Boniface_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "src": "img/3416896348610423157.jpg",
      "kind": "photo",
-     "title": "Belgique Bruges Dijver Arentspark Pont Saint-Boniface - panoramio.jpg"
+     "credit": "Boniface Bridge (Bonifaciusbrug) - How To Visit In Bruges!"
     }
    },
    {
@@ -1693,9 +1785,9 @@
     },
     "det_at": 1794353992.057686,
     "img": {
-     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Panorama_of_Brugges_Market_Square.jpg/330px-Panorama_of_Brugges_Market_Square.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "src": "img/1031125286922357956.jpg",
      "kind": "photo",
-     "title": "Panorama of Brugges Market Square.jpg"
+     "credit": "Bruges Market Square Photograph by Pati Photography"
     }
    },
    {
@@ -1826,7 +1918,11 @@
      }
     },
     "det_at": 1794353992.057686,
-    "img": null
+    "img": {
+     "src": "img/11592640612858337886.jpg",
+     "kind": "photo",
+     "credit": "Assiette Blanche, Bruges - Restaurant Reviews - Fine Traveling"
+    }
    },
    {
     "name": "Vlaminck '14",
@@ -1883,7 +1979,11 @@
      }
     },
     "det_at": 1794353992.057686,
-    "img": null
+    "img": {
+     "src": "img/4335574426258011764.jpg",
+     "kind": "photo",
+     "credit": "VLAMINCK'14, Brügge - St-anna - Menü, Preise & Restaurant Bewertungen ..."
+    }
    },
    {
     "name": "HIDE Breakfast / Lunch",
@@ -1935,7 +2035,11 @@
      }
     },
     "det_at": 1794353992.057686,
-    "img": null
+    "img": {
+     "src": "img/12061839995568839989.jpg",
+     "kind": "photo",
+     "credit": "HIDE, Bruges - Menu, Prices & Restaurant Reviews - Tripadvisor"
+    }
    }
   ]
  }
