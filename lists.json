@@ -1,0 +1,267 @@
+{
+ "updated": "2026-11-10T23:34:56.894Z",
+ "lists": {
+  "Bruges": [
+   {
+    "name": "Malesherbes (Delicatessen)",
+    "note": "",
+    "addr": "Stoofstraat 5, 8000 Brugge, Belgium",
+    "lat": 51.203314,
+    "lng": 3.2247768999999997,
+    "cid": "7322726804122268154"
+   },
+   {
+    "name": "Petit Patron (Le)",
+    "note": "",
+    "addr": "Niklaas Desparsstraat 4, 8000 Brugge, Belgium",
+    "lat": 51.209742999999996,
+    "lng": 3.2234939999999996,
+    "cid": "761386293703903304"
+   },
+   {
+    "name": "Laurence Take Away",
+    "note": "",
+    "addr": "Walstraat 4, 8000 Brugge, Belgium",
+    "lat": 51.2030093,
+    "lng": 3.2248683,
+    "cid": "12780045466001773025"
+   },
+   {
+    "name": "Chez Albert - Gauffres - Waffles",
+    "note": "",
+    "addr": "Breidelstraat 16, 8000 Brugge, Belgium",
+    "lat": 51.2085112,
+    "lng": 3.2258367999999997,
+    "cid": "2638871526101653409"
+   },
+   {
+    "name": "Rosary Quay",
+    "note": "",
+    "addr": "Rozenhoedkaai 3, 8000 Brugge, Belgium",
+    "lat": 51.2073745,
+    "lng": 3.2278678999999997,
+    "cid": "12013633755708128781"
+   },
+   {
+    "name": "Kaffee Roger",
+    "note": "",
+    "addr": "Baliestraat 6, 8000 Brugge, Belgium",
+    "lat": 51.215367099999995,
+    "lng": 3.2265121999999997,
+    "cid": "7293452383320493496"
+   },
+   {
+    "name": "Lion Belge - Brugge",
+    "note": "",
+    "addr": "Langestraat 123, 8000 Brugge, Belgium",
+    "lat": 51.2115995,
+    "lng": 3.2370411999999997,
+    "cid": "15790159966955316380"
+   },
+   {
+    "name": "ONSLOW",
+    "note": "",
+    "addr": "Jeruzalemstraat 53, 8000 Brugge, Belgium",
+    "lat": 51.2123783,
+    "lng": 3.2332234,
+    "cid": "12687416456309968077"
+   },
+   {
+    "name": "Boniface Bridge",
+    "note": "",
+    "addr": "Groeninge 6, 8000 Brugge, Belgium",
+    "lat": 51.204911599999996,
+    "lng": 3.2253486,
+    "cid": "3416896348610423157"
+   },
+   {
+    "name": "Market Square",
+    "note": "",
+    "addr": "Markt, 8000 Brugge, Belgium",
+    "lat": 51.208688099999996,
+    "lng": 3.2244082,
+    "cid": "1031125286922357956"
+   },
+   {
+    "name": "The Swan of Bruges",
+    "note": "",
+    "addr": "Langestraat 6, 8000 Brugge, Belgium",
+    "lat": 51.209625499999994,
+    "lng": 3.2315955,
+    "cid": "8947098123176107330"
+   },
+   {
+    "name": "Assiette Blanche",
+    "note": "",
+    "addr": "Philipstockstraat 23, 8000 Brugge, Belgium",
+    "lat": 51.209612199999995,
+    "lng": 3.2263799,
+    "cid": "11592640612858337886"
+   },
+   {
+    "name": "Vlaminck '14",
+    "note": "",
+    "addr": "Vlamingstraat 14, 8000 Brugge, Belgium",
+    "lat": 51.209767299999996,
+    "lng": 3.2247402,
+    "cid": "4335574426258011764"
+   },
+   {
+    "name": "HIDE Breakfast / Lunch",
+    "note": "",
+    "addr": "Cordoeaniersstraat 4, 8000 Brugge, Belgium",
+    "lat": 51.2097433,
+    "lng": 3.2255832,
+    "cid": "12061839995568839989"
+   }
+  ],
+  "Ghent": [
+   {
+    "name": "Café de Loge",
+    "note": "",
+    "addr": "Annonciadenstraat 5, 9000 Gent, Belgium",
+    "lat": 51.0499581,
+    "lng": 3.7168535,
+    "cid": "3647443293097410601"
+   },
+   {
+    "name": "Tartelette",
+    "note": "",
+    "addr": "Lange Kruisstraat 6k, 9000 Gent, Belgium",
+    "lat": 51.052654499999996,
+    "lng": 3.7257236999999996,
+    "cid": "13467070660307744325"
+   },
+   {
+    "name": "Soggy Bun",
+    "note": "",
+    "addr": "Oudburg 19, 9000 Gent, Belgium",
+    "lat": 51.058383199999994,
+    "lng": 3.7240775,
+    "cid": "12814528802184532586"
+   },
+   {
+    "name": "Fuego Lento - Pastrami and Pulled Pork Sandwiches",
+    "note": "",
+    "addr": "Sint-Baafsplein 20, 9000 Gent, Belgium",
+    "lat": 51.0532664,
+    "lng": 3.7253472999999997,
+    "cid": "7126706423654883474"
+   },
+   {
+    "name": "Zuru Zuru Ramen",
+    "note": "",
+    "addr": "Kortrijksesteenweg 110, 9000 Gent, Belgium",
+    "lat": 51.040610799999996,
+    "lng": 3.7172403999999997,
+    "cid": "3244214069350929798"
+   },
+   {
+    "name": "Martino",
+    "note": "",
+    "addr": "Vlaanderenstraat 125, 9000 Gent, Belgium",
+    "lat": 51.048919899999994,
+    "lng": 3.7312643,
+    "cid": "1706593725860988771"
+   },
+   {
+    "name": "Mémé Gusta",
+    "note": "",
+    "addr": "Burgstraat 19, 9000 Gent, Belgium",
+    "lat": 51.0564514,
+    "lng": 3.7187943,
+    "cid": "17083962374535094909"
+   }
+  ],
+  "Brussels": [
+   {
+    "name": "Domenica | Caffè Siciliano",
+    "note": "",
+    "addr": "Rue Jourdan 12, 1060 Saint-Gilles, Belgium",
+    "lat": 50.834492399999995,
+    "lng": 4.3554299,
+    "cid": "8571324740010029913"
+   },
+   {
+    "name": "Ralph",
+    "note": "",
+    "addr": "Rue du Châtelain 10, 1050 Ixelles, Belgium",
+    "lat": 50.825812199999994,
+    "lng": 4.363052,
+    "cid": "1109108161551380672"
+   },
+   {
+    "name": "RAMBO Washington",
+    "note": "",
+    "addr": "Rue Washington 7, 1050 Ixelles, Belgium",
+    "lat": 50.825706399999994,
+    "lng": 4.363233999999999,
+    "cid": "15107224357943264223"
+   },
+   {
+    "name": "Hotel NH Brussels Carrefour de l'Europe",
+    "note": "Our hotel",
+    "addr": "Rue Marche aux Herbes, Rue du Marché aux Herbes 110, 1000 Bruxelles, Belgium",
+    "lat": 50.846384,
+    "lng": 4.35532,
+    "cid": "158536316655591195"
+   },
+   {
+    "name": "Le Bugatti",
+    "note": "",
+    "addr": "Rue Jacques Jordaens 4, 1000 Bruxelles, Belgium",
+    "lat": 50.8218301,
+    "lng": 4.3670101,
+    "cid": "11302687989790057270"
+   },
+   {
+    "name": "Le Rendez-Vous Brasserie Restaurant",
+    "note": "",
+    "addr": "Rue Dejoncker 24, 1060 Bruxelles, Belgium",
+    "lat": 50.834230899999994,
+    "lng": 4.3550112,
+    "cid": "6111646406630472782"
+   },
+   {
+    "name": "Brasserie Boemvol",
+    "note": "",
+    "addr": "Rue Henri Maus 25, 1000 Bruxelles, Belgium",
+    "lat": 50.8476218,
+    "lng": 4.3499962,
+    "cid": "6216445408517881932"
+   },
+   {
+    "name": "Mendo",
+    "note": "",
+    "addr": "Rue du Bailli 90, 1050 Ixelles, Belgium",
+    "lat": 50.825456499999994,
+    "lng": 4.3596675,
+    "cid": "614099865317596125"
+   },
+   {
+    "name": "Koku Ramen",
+    "note": "",
+    "addr": "Rue Saint-Boniface 11, 1050 Ixelles, Belgium",
+    "lat": 50.836071,
+    "lng": 4.3647461,
+    "cid": "4222528654632780658"
+   },
+   {
+    "name": "Barracuda",
+    "note": "",
+    "addr": "Pl. Eugène Flagey 18A, 1050 Ixelles, Belgium",
+    "lat": 50.8271338,
+    "lng": 4.3730533,
+    "cid": "7795377989493462480"
+   },
+   {
+    "name": "Old Boy",
+    "note": "",
+    "addr": "Tenbosch 110, 1050 Ixelles, Belgium",
+    "lat": 50.8207713,
+    "lng": 4.3611037,
+    "cid": "9746207812909077969"
+   }
+  ]
+ }
+}
