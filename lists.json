@@ -222,7 +222,11 @@
      "hours": {}
     },
     "det_at": 1794434291.3287308,
-    "img": null
+    "img": {
+     "src": "img/158536316655591195.jpg",
+     "kind": "photo",
+     "credit": "NH Hotels"
+    }
    },
    {
     "name": "Le Bugatti",
@@ -1883,7 +1887,11 @@
      }
     },
     "det_at": 1794434291.3287308,
-    "img": null
+    "img": {
+     "src": "img/8947098123176107330.jpg",
+     "kind": "photo",
+     "credit": "The Swan of Bruges"
+    }
    },
    {
     "name": "Assiette Blanche",
