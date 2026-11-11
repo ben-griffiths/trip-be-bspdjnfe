@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-11T19:47:28.463256Z",
+ "updated": "2026-11-11T21:59:09.994655Z",
  "lists": {
   "Brussels": [
    {
@@ -15,6 +15,7 @@
       "Coffee shop",
       "Ice cream shop"
      ],
+     "website": "https://www.domenicafood.com/",
      "rating": 4.7,
      "reviews": 126,
      "price": null,
@@ -63,7 +64,7 @@
       ]
      }
     },
-    "det_at": 1794426390.1571908,
+    "det_at": 1794434291.3287308,
     "img": {
      "src": "img/8571324740010029913.jpg",
      "kind": "photo",
@@ -81,8 +82,9 @@
      "cats": [
       "Restaurant"
      ],
+     "website": "https://www.ralphbrussels.com/",
      "rating": 4.6,
-     "reviews": 145,
+     "reviews": 146,
      "price": null,
      "hours": {
       "2026-11-11": [
@@ -123,7 +125,7 @@
       ]
      }
     },
-    "det_at": 1794426390.1571908,
+    "det_at": 1794434291.3287308,
     "img": {
      "src": "img/1109108161551380672.jpg",
      "kind": "photo",
@@ -146,6 +148,7 @@
       "New American restaurant",
       "Restaurant"
      ],
+     "website": "https://ramboburger.com/",
      "rating": 4.5,
      "reviews": 1942,
      "price": null,
@@ -194,7 +197,7 @@
       ]
      }
     },
-    "det_at": 1794426390.1571908,
+    "det_at": 1794434291.3287308,
     "img": {
      "src": "img/15107224357943264223.jpg",
      "kind": "photo",
@@ -212,12 +215,13 @@
      "cats": [
       "Hotel"
      ],
+     "website": "https://www.nh-hotels.com/en/hotel/nh-brussels-carrefour-de-l-europe?utm_campaign=local-gmb&utm_medium=organic_search&utm_source=google_gmb",
      "rating": 4.1,
      "reviews": 1184,
      "price": null,
      "hours": {}
     },
-    "det_at": 1794426390.1571908,
+    "det_at": 1794434291.3287308,
     "img": null
    },
    {
@@ -234,6 +238,7 @@
       "Gastropub",
       "French haute cuisine restaurant"
      ],
+     "website": "https://lebugatti.be/",
      "rating": 4.5,
      "reviews": 361,
      "price": null,
@@ -262,7 +267,7 @@
       "2026-11-17": []
      }
     },
-    "det_at": 1794426390.1571908,
+    "det_at": 1794434291.3287308,
     "img": {
      "src": "img/11302687989790057270.jpg",
      "kind": "photo",
@@ -280,6 +285,7 @@
      "cats": [
       "Belgian restaurant"
      ],
+     "website": "http://rdvda.be/",
      "rating": 4.6,
      "reviews": 2002,
      "price": null,
@@ -323,7 +329,7 @@
       ]
      }
     },
-    "det_at": 1794426390.1571908,
+    "det_at": 1794434291.3287308,
     "img": {
      "src": "img/6111646406630472782.jpg",
      "kind": "photo",
@@ -341,6 +347,7 @@
      "cats": [
       "Belgian restaurant"
      ],
+     "website": "https://www.90folies.com/boemvol",
      "rating": 4.6,
      "reviews": 2574,
      "price": null,
@@ -389,7 +396,7 @@
       ]
      }
     },
-    "det_at": 1794426390.1571908,
+    "det_at": 1794434291.3287308,
     "img": {
      "src": "img/6216445408517881932.jpg",
      "kind": "photo",
@@ -408,6 +415,7 @@
       "Ramen restaurant",
       "Japanese restaurant"
      ],
+     "website": "https://www.instagram.com/mendo.ixelles/",
      "rating": 4.8,
      "reviews": 779,
      "price": null,
@@ -455,7 +463,7 @@
       ]
      }
     },
-    "det_at": 1794426390.1571908,
+    "det_at": 1794434291.3287308,
     "img": {
      "src": "img/614099865317596125.jpg",
      "kind": "photo",
@@ -473,6 +481,7 @@
      "cats": [
       "Ramen restaurant"
      ],
+     "website": "https://iekeikokuramen.com/",
      "rating": 4.8,
      "reviews": 1074,
      "price": null,
@@ -522,7 +531,7 @@
       "2026-11-17": []
      }
     },
-    "det_at": 1794426390.1571908,
+    "det_at": 1794434291.3287308,
     "img": {
      "src": "img/4222528654632780658.jpg",
      "kind": "photo",
@@ -542,8 +551,9 @@
       "Pizza restaurant",
       "Restaurant"
      ],
+     "website": "https://www.bigmammagroup.com/italian-restaurants/barracuda/",
      "rating": 4.7,
-     "reviews": 10748,
+     "reviews": 10756,
      "price": null,
      "hours": {
       "2026-11-11": [
@@ -618,7 +628,7 @@
       ]
      }
     },
-    "det_at": 1794426390.1571908,
+    "det_at": 1794434291.3287308,
     "img": {
      "src": "img/7795377989493462480.jpg",
      "kind": "photo",
@@ -637,6 +647,7 @@
       "Asian fusion restaurant",
       "Restaurant"
      ],
+     "website": "http://oldboyrestaurant.be/",
      "rating": 4.4,
      "reviews": 1334,
      "price": null,
@@ -705,7 +716,7 @@
       ]
      }
     },
-    "det_at": 1794426390.1571908,
+    "det_at": 1794434291.3287308,
     "img": {
      "src": "img/9746207812909077969.jpg",
      "kind": "photo",
@@ -727,6 +738,7 @@
       "Diner",
       "Live music bar"
      ],
+     "website": "http://www.deloge.be/",
      "rating": 4.6,
      "reviews": 620,
      "price": null,
@@ -775,7 +787,7 @@
       ]
      }
     },
-    "det_at": 1794426390.1571908,
+    "det_at": 1794434291.3287308,
     "img": {
      "src": "img/3647443293097410601.jpg",
      "kind": "photo",
@@ -795,6 +807,7 @@
       "Patisserie",
       "Tea room"
      ],
+     "website": "https://www.tartelette.be/",
      "rating": 4.9,
      "reviews": 389,
      "price": null,
@@ -833,7 +846,7 @@
       "2026-11-17": []
      }
     },
-    "det_at": 1794426390.1571908,
+    "det_at": 1794434291.3287308,
     "img": {
      "src": "img/13467070660307744325.jpg",
      "kind": "photo",
@@ -852,6 +865,7 @@
       "Kiosk",
       "Buffet restaurant"
      ],
+     "website": "http://www.soggybun.be/",
      "rating": 5,
      "reviews": 45,
      "price": null,
@@ -890,7 +904,7 @@
       ]
      }
     },
-    "det_at": 1794426390.1571908,
+    "det_at": 1794434291.3287308,
     "img": {
      "src": "img/12814528802184532586.jpg",
      "kind": "photo",
@@ -911,6 +925,7 @@
       "Fast food restaurant",
       "Takeaway"
      ],
+     "website": "https://mylightspeed.app/QVYQYJWQ/C-ordering/menu",
      "rating": 4.8,
      "reviews": 209,
      "price": null,
@@ -954,8 +969,12 @@
       "2026-11-17": []
      }
     },
-    "det_at": 1794426390.1571908,
-    "img": null
+    "det_at": 1794434291.3287308,
+    "img": {
+     "src": "img/7126706423654883474.jpg",
+     "kind": "photo",
+     "credit": "Fuego Lento via Uber Eats"
+    }
    },
    {
     "name": "Zuru Zuru Ramen",
@@ -970,6 +989,7 @@
       "Authentic Japanese Restaurant",
       "Japanese restaurant"
      ],
+     "website": "https://www.zuruzuru-ramen.be/",
      "rating": 4.6,
      "reviews": 1038,
      "price": null,
@@ -1028,7 +1048,7 @@
       ]
      }
     },
-    "det_at": 1794426390.1571908,
+    "det_at": 1794434291.3287308,
     "img": {
      "src": "img/3244214069350929798.jpg",
      "kind": "photo",
@@ -1046,6 +1066,7 @@
      "cats": [
       "Restaurant"
      ],
+     "website": "http://www.snackbarmartino.be/",
      "rating": 4.5,
      "reviews": 320,
      "price": null,
@@ -1084,7 +1105,7 @@
       "2026-11-17": []
      }
     },
-    "det_at": 1794426390.1571908,
+    "det_at": 1794434291.3287308,
     "img": {
      "src": "img/1706593725860988771.jpg",
      "kind": "photo",
@@ -1102,6 +1123,7 @@
      "cats": [
       "Belgian restaurant"
      ],
+     "website": "http://www.meme-gusta.be/",
      "rating": 4.5,
      "reviews": 2346,
      "price": null,
@@ -1161,7 +1183,7 @@
       ]
      }
     },
-    "det_at": 1794426390.1571908,
+    "det_at": 1794434291.3287308,
     "img": {
      "src": "img/17083962374535094909.jpg",
      "kind": "photo",
@@ -1181,6 +1203,7 @@
      "cats": [
       "Restaurant"
      ],
+     "website": "http://www.restaurantmalesherbes.be/",
      "rating": 4.7,
      "reviews": 244,
      "price": null,
@@ -1235,7 +1258,7 @@
       "2026-11-17": []
      }
     },
-    "det_at": 1794426390.1571908,
+    "det_at": 1794434291.3287308,
     "img": {
      "src": "img/7322726804122268154.jpg",
      "kind": "photo",
@@ -1253,6 +1276,7 @@
      "cats": [
       "Fondue restaurant"
      ],
+     "website": "http://www.lepetitpatron.be/",
      "rating": 4.5,
      "reviews": 263,
      "price": null,
@@ -1304,7 +1328,7 @@
       ]
      }
     },
-    "det_at": 1794426390.1571908,
+    "det_at": 1794434291.3287308,
     "img": {
      "src": "img/761386293703903304.jpg",
      "kind": "photo",
@@ -1323,12 +1347,13 @@
       "Dessert shop",
       "Ice cream shop"
      ],
+     "website": null,
      "rating": 4.8,
      "reviews": 1146,
      "price": null,
      "hours": {}
     },
-    "det_at": 1794426390.1571908,
+    "det_at": 1794434291.3287308,
     "img": {
      "src": "img/12780045466001773025.jpg",
      "kind": "photo",
@@ -1348,6 +1373,7 @@
       "Dessert restaurant",
       "Fast food restaurant"
      ],
+     "website": "http://www.chezalbert.be/",
      "rating": 4.6,
      "reviews": 3864,
      "price": null,
@@ -1396,7 +1422,7 @@
       ]
      }
     },
-    "det_at": 1794426390.1571908,
+    "det_at": 1794434291.3287308,
     "img": {
      "src": "img/2638871526101653409.jpg",
      "kind": "photo",
@@ -1416,8 +1442,9 @@
       "Historical landmark",
       "Scenic point"
      ],
+     "website": "https://www.visitbruges.be/en/rozenhoedkaai",
      "rating": 4.8,
-     "reviews": 3235,
+     "reviews": 3236,
      "price": null,
      "hours": {
       "2026-11-11": [
@@ -1464,7 +1491,7 @@
       ]
      }
     },
-    "det_at": 1794426390.1571908,
+    "det_at": 1794434291.3287308,
     "img": {
      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/Bruegge_View_from_Rozenhoedkaai.jpg/330px-Bruegge_View_from_Rozenhoedkaai.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
      "kind": "photo",
@@ -1482,6 +1509,7 @@
      "cats": [
       "Restaurant"
      ],
+     "website": "https://kaffeeroger.be/",
      "rating": 4.8,
      "reviews": 45,
      "price": null,
@@ -1500,7 +1528,7 @@
       "2026-11-17": []
      }
     },
-    "det_at": 1794426390.1571908,
+    "det_at": 1794434291.3287308,
     "img": {
      "src": "img/7293452383320493496.jpg",
      "kind": "photo",
@@ -1520,6 +1548,7 @@
       "Cafe",
       "Brasserie"
      ],
+     "website": "http://www.lionbelgebrugge.be/",
      "rating": 4.7,
      "reviews": 736,
      "price": null,
@@ -1574,7 +1603,7 @@
       "2026-11-17": []
      }
     },
-    "det_at": 1794426390.1571908,
+    "det_at": 1794434291.3287308,
     "img": {
      "src": "img/15790159966955316380.jpg",
      "kind": "photo",
@@ -1593,6 +1622,7 @@
       "Restaurant",
       "Small plates restaurant"
      ],
+     "website": "http://www.onslowbrugge.be/",
      "rating": 4.7,
      "reviews": 435,
      "price": null,
@@ -1648,7 +1678,7 @@
       ]
      }
     },
-    "det_at": 1794426390.1571908,
+    "det_at": 1794434291.3287308,
     "img": {
      "src": "img/12687416456309968077.jpg",
      "kind": "photo",
@@ -1668,6 +1698,7 @@
       "Historical landmark",
       "Tourist attraction"
      ],
+     "website": "https://www.visitbruges.be/en/bonifaciusbrug-bonifaciusbridge",
      "rating": 4.7,
      "reviews": 4359,
      "price": null,
@@ -1716,7 +1747,7 @@
       ]
      }
     },
-    "det_at": 1794426390.1571908,
+    "det_at": 1794434291.3287308,
     "img": {
      "src": "img/3416896348610423157.jpg",
      "kind": "photo",
@@ -1735,6 +1766,7 @@
       "Historical landmark",
       "Tourist attraction"
      ],
+     "website": null,
      "rating": 4.7,
      "reviews": 18209,
      "price": null,
@@ -1783,7 +1815,7 @@
       ]
      }
     },
-    "det_at": 1794426390.1571908,
+    "det_at": 1794434291.3287308,
     "img": {
      "src": "img/1031125286922357956.jpg",
      "kind": "photo",
@@ -1801,6 +1833,7 @@
      "cats": [
       "French restaurant"
      ],
+     "website": "https://www.theswanofbruges.be/en/",
      "rating": 4.6,
      "reviews": 42,
      "price": null,
@@ -1849,7 +1882,7 @@
       ]
      }
     },
-    "det_at": 1794426390.1571908,
+    "det_at": 1794434291.3287308,
     "img": null
    },
    {
@@ -1863,6 +1896,7 @@
      "cats": [
       "Fine dining restaurant"
      ],
+     "website": "http://www.assietteblanche.be/",
      "rating": 4.7,
      "reviews": 367,
      "price": null,
@@ -1917,7 +1951,7 @@
       "2026-11-17": []
      }
     },
-    "det_at": 1794426390.1571908,
+    "det_at": 1794434291.3287308,
     "img": {
      "src": "img/11592640612858337886.jpg",
      "kind": "photo",
@@ -1935,8 +1969,9 @@
      "cats": [
       "Restaurant"
      ],
+     "website": "https://www.vlaminck14.be/",
      "rating": 4.6,
-     "reviews": 3115,
+     "reviews": 3116,
      "price": null,
      "hours": {
       "2026-11-11": [],
@@ -1978,7 +2013,7 @@
       ]
      }
     },
-    "det_at": 1794426390.1571908,
+    "det_at": 1794434291.3287308,
     "img": {
      "src": "img/4335574426258011764.jpg",
      "kind": "photo",
@@ -1996,6 +2031,7 @@
      "cats": [
       "Breakfast restaurant"
      ],
+     "website": "https://www.instagram.com/hidebrugge?igsh=MW84ZTBwNmJlbjZjaA%3D%3D&utm_source=qr",
      "rating": 4.9,
      "reviews": 2672,
      "price": null,
@@ -2034,7 +2070,7 @@
       "2026-11-17": []
      }
     },
-    "det_at": 1794426390.1571908,
+    "det_at": 1794434291.3287308,
     "img": {
      "src": "img/12061839995568839989.jpg",
      "kind": "photo",

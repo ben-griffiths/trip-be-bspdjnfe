@@ -26,6 +26,15 @@ def details(it):
     p=find_place(gjson(get(u)),hex(int(it["cid"])),it["name"])
     if not p: return None
     d={"cats":p[13] or []}
+    website=None
+    try:
+        raw=p[7][0]
+        if raw.startswith("/url?"):
+            website=urllib.parse.parse_qs(urllib.parse.urlparse(raw).query).get("q",[None])[0]
+        elif raw.startswith("http"):
+            website=raw
+    except Exception: pass
+    d["website"]=website
     try: d["rating"]=p[4][7]; d["reviews"]=p[4][8]
     except Exception: pass
     try: d["price"]=p[4][2]
@@ -70,7 +79,14 @@ for c,L in (old.get("lists") or {}).items():
 out={}
 for c,i in IDS.items():
     u="https://www.google.com/maps/preview/entitylist/getlist?authuser=0&hl=en&gl=uk&pb=!1m4!1s"+i+"!2e1!3m1!1e1!2e2!3e2!4i500!16b1"
-    L=gjson(get(u))[0]
+    try:
+        data=gjson(get(u)); L=data[0] if data and data[0] else None
+        if not L or len(L)<=8: raise ValueError("empty Google Maps list response")
+    except Exception as e:
+        print("list fetch failed, keeping cached",c,e)
+        keys=("name","note","addr","lat","lng","cid")
+        out[c]=[{k:it.get(k) for k in keys} for it in (old.get("lists") or {}).get(c,[])]
+        continue
     items=[]
     for it in (L[8] or []):
         p=it[1]
@@ -80,7 +96,7 @@ now=time.time()
 for c,items in out.items():
     for it in items:
         old_it=cache.get(it["cid"]) or {}
-        fresh=old_it.get("det_at",0)>now-6*3600 and old_it.get("det")
+        fresh=old_it.get("det_at",0)>now-6*3600 and old_it.get("det") and "website" in old_it["det"]
         if fresh: it["det"]=old_it["det"]; it["det_at"]=old_it["det_at"]
         else:
             try: d=details(it)
