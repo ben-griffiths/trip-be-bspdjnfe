@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-22T15:31:34.943784Z",
+ "updated": "2026-11-22T21:28:31.884909Z",
  "lists": {
   "Brussels": [
    {
@@ -1205,8 +1205,8 @@
     "name": "Malesherbes (Delicatessen)",
     "note": "",
     "addr": "Stoofstraat 5, 8000 Brugge, Belgium",
-    "lat": 51.203314,
-    "lng": 3.2247768999999997,
+    "lat": 51.203212099999995,
+    "lng": 3.2245084999999998,
     "cid": "7322726804122268154",
     "det": {
      "cats": [
